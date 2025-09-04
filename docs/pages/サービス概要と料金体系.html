@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サービス概要と料金体系</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom toggle switch */
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #2563eb; /* Blue 600 */
+        }
+        .toggle-checkbox:checked + .toggle-label .toggle-ball {
+            transform: translateX(100%);
+        }
+        .price-card {
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #e5e7eb;
+        }
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .highlight-card {
+            border-color: #2563eb;
+            box-shadow: 0 0 25px rgba(37, 99, 235, 0.2);
+        }
+        .price-tag {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+        }
+        .price-sub {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: #4b5563;
+        }
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+        .feature-list li i {
+            flex-shrink: 0;
+            margin-right: 0.75rem;
+            color: #2563eb;
+            margin-top: 5px;
+        }
+        .comparison-value {
+            transition: all 0.3s ease;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        .faq-item {
+            border-bottom: 1px solid #d1d5db;
+        }
+    </style>
+    <meta name="description" content="経営顧問サービスを基盤に、補助金申請支援や銀行融資支援、BPO、M&A・事業承継などをワンストップで提供するサービス概要と料金体系。顧問加入特典により費用対効果を最大化。">
+</head>
+<body class="text-slate-700">
+    <div class="container mx-auto p-4 sm:p-8 max-w-7xl">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-4">事業成長を加速させる財務戦略パートナー</h1>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                当社のサービスは、お客様の継続的な成長を支援する「経営顧問サービス」を基盤としています。<br class="hidden md:block">
+                資金繰りの安定化と銀行格付向上を同時に実現し、全てのサービスをより効果的かつ安価にご利用いただけます。
+            </p>
+        </header>
+
+        <!-- Toggle Switch Section -->
+        <div class="flex items-center justify-center mb-10 space-x-4 p-4 bg-white rounded-xl shadow-md max-w-lg mx-auto">
+            <span class="text-lg font-medium text-slate-700">通常料金</span>
+            <div class="relative">
+                <input type="checkbox" id="advisorToggle" class="toggle-checkbox sr-only" checked>
+                <label for="advisorToggle" class="toggle-label flex items-center w-14 h-8 bg-slate-300 rounded-full cursor-pointer transition-colors duration-300 ease-in-out">
+                    <span class="toggle-ball inline-block w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 ease-in-out"></span>
+                </label>
+            </div>
+            <span class="text-lg font-bold text-blue-700">
+                顧問サービス加入特典
+                <span class="text-sm text-amber-500 font-semibold ml-1">(圧倒的にお得)</span>
+            </span>
+        </div>
+        
+        <!-- Services Grid Section -->
+        <div id="price-container">
+
+            <!-- Tier 1: Foundational Services -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 text-center mb-8 border-b-2 border-blue-200 pb-4">1階：基盤サービス (月額継続)</h2>
+                <p class="text-center text-slate-600 mb-10 max-w-4xl mx-auto">全ての事業活動の土台となる、財務体質の強化と経営判断の高速化を実現するサービスです。まずはここから始めることを強く推奨します。</p>
+                <div class="grid md:grid-cols-1 lg:grid-cols-5 gap-8">
+                    
+                    <!-- Management Advisory Service -->
+                    <div class="lg:col-span-3 price-card highlight-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4">
+                               <i data-lucide="shield-check" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900">経営顧問サービス <span class="text-sm font-semibold text-blue-600">本命・中核</span></h3>
+                                <p class="text-slate-500">資金繰り改善・銀行格付向上を伴走支援</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 mb-6">
+                            全てのサービスの基盤です。年商規模に応じた月額料金で、資金調達から原価管理まで、経営の根幹を継続的にサポートします。
+                        </p>
+                        <ul class="feature-list text-slate-600 mb-6">
+                            <li><i data-lucide="check-circle-2" class="w-5 h-5"></i> 12ヶ月先までの資金繰りを可視化し、投資計画を策定</li>
+                            <li><i data-lucide="check-circle-2" class="w-5 h-5"></i> 銀行融資と補助金の最適な年間ロードマップを作成</li>
+                            <li><i data-lucide="check-circle-2" class="w-5 h-5"></i> 銀行格付の向上をKPI管理で伴走支援（元銀行員の知見）</li>
+                            <li><i data-lucide="check-circle-2" class="w-5 h-5"></i> 部門/商品別の原価管理を導入し、利益体質を強化</li>
+                        </ul>
+                        <div class="grid sm:grid-cols-2 gap-4 mt-auto">
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
+                                <p class="text-sm text-slate-500">年商 5千万~1億円</p>
+                                <p class="text-xl font-bold text-slate-800">月額 5万円</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
+                                <p class="text-sm text-slate-500">年商 ~5億円</p>
+                                <p class="text-xl font-bold text-slate-800">月額 10万円</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
+                                <p class="text-sm text-slate-500">年商 ~10億円</p>
+                                <p class="text-xl font-bold text-slate-800">月額 15万円</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
+                                <p class="text-sm text-slate-500">年商 ~30億円</p>
+                                <p class="text-xl font-bold text-slate-800">月額 20万円</p>
+                            </div>
+                        </div>
+                        <a href="経営顧問サービス.html" class="mt-8 w-full text-center bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">詳細を見る</a>
+                    </div>
+
+                    <!-- Bookkeeping/BPO Service -->
+                    <div class="lg:col-span-2 price-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
+                        <div class="flex items-center mb-4">
+                             <div class="bg-green-100 text-green-600 p-3 rounded-full mr-4">
+                               <i data-lucide="archive" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900">記帳代行・BPO</h3>
+                                <p class="text-slate-500">経営判断に活きる情報創造</p>
+                            </div>
+                        </div>
+                        <ul class="feature-list text-slate-600 mb-6">
+                            <li><i data-lucide="check-circle-2" class="w-5 h-5"></i> 月次締めは <span class="font-bold text-green-700">翌月5営業日以内</span>（スピード経営）</li>
+                            <li><i data-lucide="check-circle-2" class="w-5 h-5"></i> <span class="font-semibold">銀行目線の経営レポート</span>を標準装備</li>
+                            <li><i data-lucide="check-circle-2" class="w-5 h-5"></i> 補助金の証憑・実績報告を月次運用に統合</li>
+                            <li><i data-lucide="check-circle-2" class="w-5 h-5"></i> freee導入/自動化との連携で<strong>時間圧縮</strong>と<strong>価値向上</strong></li>
+                        </ul>
+                        <div class="my-auto bg-slate-50 border border-slate-200 rounded-lg p-4">
+                            <p class="text-sm text-slate-500 mb-2">料金プラン（税別・目安）</p>
+                            <div class="grid sm:grid-cols-2 gap-3 text-slate-700 text-sm">
+                                <div class="bg-white border border-slate-200 rounded-md p-3">
+                                    <div class="font-semibold">ミニマム</div>
+                                    <div class="comparison-value" data-with-advisor="5時間｜16,000円" data-without-advisor="5時間｜20,000円">5時間｜16,000円</div>
+                                </div>
+                                <div class="bg-white border border-slate-200 rounded-md p-3">
+                                    <div class="font-semibold">スタンダード</div>
+                                    <div class="comparison-value" data-with-advisor="10時間｜32,000円" data-without-advisor="10時間｜40,000円">10時間｜32,000円</div>
+                                </div>
+                                <div class="bg-white border border-slate-200 rounded-md p-3">
+                                    <div class="font-semibold">プレミアム</div>
+                                    <div class="comparison-value" data-with-advisor="20時間｜64,000円" data-without-advisor="20時間｜80,000円">20時間｜64,000円</div>
+                                </div>
+                                <div class="bg-white border border-slate-200 rounded-md p-3">
+                                    <div class="font-semibold">カスタマイズ</div>
+                                    <div class="comparison-value" data-with-advisor="20時間〜｜個別見積り（顧問20%優遇）" data-without-advisor="20時間〜｜個別見積り">20時間〜｜個別見積り（顧問20%優遇）</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="記帳代行・BPO.html" class="mt-8 w-full text-center bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition-colors">詳細を見る</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tier 2: Project-based Services -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 text-center mb-8 border-b-2 border-blue-200 pb-4">2階：付加価値サービス (プロジェクト型)</h2>
+                <p class="text-center text-slate-600 mb-10 max-w-4xl mx-auto">強固な財務基盤（1階）の上に、さらなる成長を実現するための具体的な施策を実行します。<br class="hidden md:block">顧問サービスと組み合わせることで、費用対効果が最大化されます。</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Subsidy Application Support -->
+                    <div class="price-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
+                        <div class="flex items-center mb-4">
+                             <div class="bg-amber-100 text-amber-600 p-3 rounded-full mr-4">
+                               <i data-lucide="award" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900">補助金申請支援</h3>
+                                <p class="text-slate-500">採択から事業化までフルサポート</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 mb-6">
+                            採択率だけでなく、採択後の実行・報告まで見据えた伴走支援で、投資効果を最大化します。<span class="font-bold">単発でのご依頼は高コストかつリスクが高いため推奨しておりません。</span>
+                        </p>
+                        <div class="bg-slate-50 rounded-lg p-6 my-auto">
+                            <div class="flex justify-between items-baseline mb-2">
+                                <span class="text-lg font-medium text-slate-600">着手金</span>
+                                <span class="price-tag text-blue-600 comparison-value" data-with-advisor="0円" data-without-advisor="10万円~">0円</span>
+                            </div>
+                            <div class="flex justify-between items-baseline">
+                                <span class="text-lg font-medium text-slate-600">成功報酬</span>
+                                <span class="price-tag text-blue-600 comparison-value" data-with-advisor="7.5-10%" data-without-advisor="20-30%">7.5-10%</span>
+                            </div>
+                            <div id="advisor-benefit-subsidy" class="text-center mt-4 text-green-600 font-semibold opacity-100 transition-opacity">
+                                顧問セット(プランA)適用
+                            </div>
+                        </div>
+                        <a href="補助金申請支援.html" class="mt-8 w-full text-center bg-amber-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-amber-600 transition-colors">詳細を見る</a>
+                    </div>
+
+                    <!-- Loan Support -->
+                    <div class="price-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4">
+                               <i data-lucide="landmark" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900">銀行融資支援</h3>
+                                <p class="text-slate-500">金融機関との交渉を有利に</p>
+                            </div>
+                        </div>
+                         <p class="text-slate-600 mb-6">
+                            元銀行員のノウハウを活かし、事業計画の策定から面談同席まで一貫して支援。好条件での資金調達を実現します。
+                        </p>
+                        <div class="bg-slate-50 rounded-lg p-6 my-auto">
+                            <div class="flex justify-between items-baseline mb-2">
+                                <span class="text-lg font-medium text-slate-600">着手金</span>
+                                <span class="price-tag text-blue-600">0円</span>
+                            </div>
+                            <div class="flex justify-between items-baseline">
+                                <span class="text-lg font-medium text-slate-600">成功報酬</span>
+                                <span class="price-tag text-blue-600 comparison-value" data-with-advisor="2.5%" data-without-advisor="5%">2.5%</span>
+                            </div>
+                            <div id="advisor-benefit-loan" class="text-center mt-4 text-green-600 font-semibold opacity-100 transition-opacity">
+                                顧問特典で成功報酬が半額に！
+                            </div>
+                        </div>
+                        <a href="銀行融資支援.html" class="mt-8 w-full text-center bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">詳細を見る</a>
+                    </div>
+
+                    <!-- freee Implementation Support -->
+                    <div class="price-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-teal-100 text-teal-600 p-3 rounded-full mr-4">
+                               <i data-lucide="settings" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900">freee導入支援</h3>
+                                <p class="text-slate-500">会計・経費・請求を一体運用へ</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 mb-6">
+                            現場フローに合わせて勘定科目・部門・タグ設計、証憑連携・仕訳自動化、ダッシュボードまで構築。<span class="font-semibold">翌月5営業日の月次締め</span>を実現します。
+                        </p>
+                        <div class="bg-slate-50 rounded-lg p-6 my-auto text-center">
+                            <p class="text-lg font-medium text-slate-600">料金</p>
+                            <p class="price-tag text-slate-800">10-150万円</p>
+                            <div id="advisor-benefit-freee" class="mt-3 text-green-600 font-semibold opacity-100 transition-opacity">顧問企業様は、お見積りから 10–20%優遇</div>
+                        </div>
+                        <a href="freee導入支援.html" class="mt-8 w-full text-center bg-teal-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-700 transition-colors">詳細を見る</a>
+                    </div>
+
+                    <!-- Generative AI & Automation Support -->
+                    <div class="price-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 text-purple-600 p-3 rounded-full mr-4">
+                               <i data-lucide="sparkles" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900">生成AI・自動化支援</h3>
+                                <p class="text-slate-500">バックオフィスを賢く高速化</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 mb-6">
+                            請求・証憑の読取、仕訳・集計の自動化、ワークフロー連携（Zapier/Make等）を設計。<span class="font-semibold">ROI 6–12ヶ月</span>を目安に投資回収します。
+                        </p>
+                        <div class="bg-slate-50 rounded-lg p-6 my-auto text-center">
+                            <p class="text-lg font-medium text-slate-600">料金</p>
+                            <p class="price-tag text-slate-800">3-100万円</p>
+                            <div id="advisor-benefit-automation" class="mt-3 text-green-600 font-semibold opacity-100 transition-opacity">顧問企業様は、お見積りから 10–20%優遇</div>
+                        </div>
+                        <a href="生成AI・自動化支援.html" class="mt-8 w-full text-center bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors">詳細を見る</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Tier 3: Advanced Services -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 text-center mb-8 border-b-2 border-blue-200 pb-4">3階：高度専門サービス</h2>
+                <p class="text-center text-slate-600 mb-10 max-w-4xl mx-auto">企業のステージを大きく変える、高度な経営課題に対応します。顧問企業様には優先的に専門家チームを組成し、価格も優遇いたします。</p>
+                 <div class="price-card bg-white rounded-xl shadow-lg p-8">
+                     <div class="flex flex-col md:flex-row items-start md:items-center mb-4">
+                        <div class="bg-rose-100 text-rose-600 p-3 rounded-full mr-4 mb-4 md:mb-0">
+                           <i data-lucide="rocket" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900">事業承継・M&A・業務改革など</h3>
+                            <p class="text-slate-500">企業の変革期を支える専門家チーム</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 mb-6">
+                        COO代行、基幹システム導入、M&A支援、事業再生、高度な生成AI活用・自動化など、企業の未来を左右する重要なプロジェクトに対応します。各案件の規模と難易度に応じて個別にお見積もりいたします。
+                    </p>
+                    <div class="bg-slate-50 rounded-lg p-6 text-center">
+                        <p class="text-lg font-medium text-slate-600">料金</p>
+                        <p class="price-tag text-slate-800">個別お見積もり</p>
+                        <div id="advisor-benefit-advanced" class="mt-4 font-semibold opacity-100 transition-opacity">
+                            <span class="text-green-600 text-lg">顧問企業様は、お見積もりから <span class="text-xl text-blue-600 comparison-value" data-with-advisor="10-20%優遇" data-without-advisor="標準価格">10-20%優遇</span></span>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="mb-16">
+            <h2 class="section-title">よくあるご質問</h2>
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                <div class="faq-item py-4">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Q. なぜ「経営顧問サービス」が全ての基本なのですか？</h3>
+                    <p class="text-slate-600">A. 企業の成長には、場当たり的な施策ではなく、安定した財務基盤が不可欠だからです。顧問サービスで資金繰りと銀行評価を継続的に改善することで、補助金や融資といった「2階」のサービスがより低リスク・低コストで実行でき、投資効果を最大化できる好循環が生まれます。</p>
+                </div>
+                <div class="faq-item py-4">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Q. 税理士との違いは何ですか？</h3>
+                    <p class="text-slate-600">A. 税理士が「過去」の会計記録を基に税務申告を行う専門家であるのに対し、私たちは「未来」の経営判断に資する財務戦略の専門家です。元銀行員の視点で、どうすれば銀行評価が上がり、有利な条件で資金調達できるか、未来のキャッシュフローをどう最大化するか、という点に特化しています。</p>
+                </div>
+                <div class="faq-item pt-4">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Q. 投資対効果はどれくらい見込めますか？</h3>
+                    <p class="text-slate-600">A. お客様の状況によりますが、過去の実績では多くの企業様で投資額の数倍以上の経済効果が生まれています。例えば、銀行格付向上による金利削減（年間数百万円）、適切な投資判断による機会損失の回避、補助金の獲得などを通じて、顧問料を大きく上回るリターンを実現しています。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="bg-white rounded-xl shadow-xl p-8 md:p-12 text-center">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-blue-100 text-blue-600 p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                    <i data-lucide="clipboard-check" class="w-12 h-12"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">まずは「無料」の経営ファイナンス健診から</h2>
+                <p class="text-lg text-slate-600 mb-8">
+                    現在の財務状況、資金繰りの課題、銀行からの評価などを90分で多角的に診断し、改善に向けた具体的なステップをご提案します。サービス利用を前提としない相談だけでも歓迎です。まずはお気軽にお問い合わせください。
+                </p>
+                <a href="mailto:contact@yourcompany.com?subject=無料経営ファイナンス健診の申し込み" class="inline-block bg-blue-600 text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-blue-700 transition-colors shadow-lg">
+                    無料診断を申し込む (90分)
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center p-6 bg-slate-800 text-slate-400 mt-16">
+        <p>&copy; 2025 Your Company Name. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        const toggle = document.getElementById('advisorToggle');
+        const priceContainer = document.getElementById('price-container');
+
+        const updatePrices = (isAdvisor) => {
+            const comparisonElements = priceContainer.querySelectorAll('.comparison-value');
+            const subsidyBenefit = document.getElementById('advisor-benefit-subsidy');
+            const loanBenefit = document.getElementById('advisor-benefit-loan');
+            const advancedBenefit = document.getElementById('advisor-benefit-advanced');
+            const freeeBenefit = document.getElementById('advisor-benefit-freee');
+            const automationBenefit = document.getElementById('advisor-benefit-automation');
+            
+            comparisonElements.forEach(el => {
+                const value = isAdvisor ? el.dataset.withAdvisor : el.dataset.withoutAdvisor;
+                el.style.opacity = 0;
+                setTimeout(() => {
+                    el.textContent = value;
+                    el.style.opacity = 1;
+                }, 150);
+            });
+            
+            // For Subsidy Support
+             if (isAdvisor) {
+                subsidyBenefit.textContent = '顧問セット(プランA)適用';
+                subsidyBenefit.classList.remove('text-slate-500');
+                subsidyBenefit.classList.add('text-green-600');
+                subsidyBenefit.style.opacity = 1;
+            } else {
+                subsidyBenefit.textContent = 'スポット(プランS)適用';
+                subsidyBenefit.classList.remove('text-green-600');
+                subsidyBenefit.classList.add('text-slate-500');
+                subsidyBenefit.style.opacity = 1;
+            }
+
+            // For Loan and Advanced Benefits
+            loanBenefit.style.opacity = isAdvisor ? 1 : 0;
+            advancedBenefit.style.opacity = isAdvisor ? 1 : 0;
+             if (isAdvisor) {
+                loanBenefit.innerHTML = '顧問特典で成功報酬が<span class="font-bold">半額</span>に！';
+            }
+
+            // For freee / Automation benefits
+            if (freeeBenefit && automationBenefit) {
+              if (isAdvisor) {
+                freeeBenefit.textContent = '顧問企業様は、お見積りから 10–20%優遇';
+                freeeBenefit.classList.remove('text-slate-500');
+                freeeBenefit.classList.add('text-green-600');
+                freeeBenefit.style.opacity = 1;
+                automationBenefit.textContent = '顧問企業様は、お見積りから 10–20%優遇';
+                automationBenefit.classList.remove('text-slate-500');
+                automationBenefit.classList.add('text-green-600');
+                automationBenefit.style.opacity = 1;
+              } else {
+                freeeBenefit.textContent = '';
+                freeeBenefit.style.opacity = 0;
+                automationBenefit.textContent = '';
+                automationBenefit.style.opacity = 0;
+              }
+            }
+        };
+
+        toggle.addEventListener('change', (event) => {
+            updatePrices(event.target.checked);
+        });
+
+        // Initial load
+        updatePrices(toggle.checked);
+
+    </script>
+</body>
+</html>
