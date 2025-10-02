@@ -3,119 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>freee導入支援｜サービス詳細</title>
+  <title>freee導入支援｜会計DXを加速</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
-    body { font-family: 'Inter','Noto Sans JP',sans-serif; background:#f0f4f8; }
-    .gradient-text { background: linear-gradient(to right, #0f766e, #14b8a6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .section { background:#fff; border:1px solid #e5e7eb; box-shadow:0 4px 12px rgba(0,0,0,.05) }
-    .price-tag { font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; }
+    body { font-family: 'Inter','Noto Sans JP',sans-serif; }
+    .hero-gradient { background: linear-gradient(135deg, #ecfeff 0%, #cffafe 35%, #ffffff 100%); }
+    .section-card { background: #ffffff; border: 1px solid #e5e7eb; box-shadow: 0 12px 30px rgba(13, 148, 136, .12); }
+    .pill { background: rgba(20, 184, 166, .12); color: #0f766e; }
   </style>
+  <meta name="description" content="勘定科目・部門・タグ設計から証憑連携、自動仕訳、運用定着まで支援するfreee導入支援。ライト/スタンダード/プレミアムのプランと導入ステップを紹介。" />
 </head>
-<body class="text-slate-700">
-  <div class="container mx-auto p-4 sm:p-8 max-w-7xl">
-    <div class="flex items-center justify-between mb-4">
-      <a href="サービス概要と料金体系.html" class="text-teal-700 hover:underline flex items-center"><i data-lucide="arrow-left" class="w-5 h-5 mr-1"></i>戻る</a>
-    </div>
-    <header class="text-center mb-8">
-      <h1 class="text-4xl font-bold gradient-text mb-2">freee導入支援</h1>
-      <p class="text-slate-600">会計・経費・請求を一体運用に。翌月5営業日の月次締めを実現</p>
+<body class="bg-slate-50 text-slate-700">
+  <div class="min-h-screen">
+    <header class="relative hero-gradient">
+      <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-20">
+        <div class="flex items-center justify-between mb-6">
+          <a href="サービス概要と料金体系.html" class="text-teal-700 hover:text-teal-900 flex items-center text-sm font-semibold"><i data-lucide="arrow-left" class="w-5 h-5 mr-1"></i>サービス一覧へ戻る</a>
+          <a href="mailto:contact@yourcompany.com?subject=freee導入支援の相談について" class="hidden sm:inline-flex items-center gap-2 bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg shadow-teal-200 hover:bg-teal-700"><i data-lucide="settings" class="w-4 h-4"></i>相談を予約</a>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <span class="pill inline-flex items-center px-3 py-1 rounded-full uppercase tracking-wider text-xs font-semibold">freee Implementation</span>
+            <h1 class="mt-4 text-4xl sm:text-5xl font-bold text-slate-900 leading-tight">freee導入支援<span class="block text-teal-700 text-3xl sm:text-4xl font-semibold mt-2">会計・経費・請求を一体運用に整え、翌月5営業日締めへ</span></h1>
+            <p class="mt-6 text-base sm:text-lg text-slate-600 leading-7">現場のオペレーションに合わせて勘定科目・部門・タグ・承認フローを再設計。証憑連携と自動仕訳を組み込み、銀行評価や管理会計にも使えるデータ基盤を構築します。</p>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="bg-white/70 border border-teal-100 rounded-xl p-4 shadow-sm">
+                <div class="flex items-center mb-2"><i data-lucide="settings" class="w-5 h-5 text-teal-600 mr-2"></i><span class="text-sm font-semibold text-teal-700">設計</span></div>
+                <p class="text-xs text-slate-500">勘定科目・部門・タグ・承認を最適化</p>
+              </div>
+              <div class="bg-white/70 border border-teal-100 rounded-xl p-4 shadow-sm">
+                <div class="flex items-center mb-2"><i data-lucide="link" class="w-5 h-5 text-teal-600 mr-2"></i><span class="text-sm font-semibold text-teal-700">連携</span></div>
+                <p class="text-xs text-slate-500">証憑/銀行/カード/請求データを接続</p>
+              </div>
+              <div class="bg-white/70 border border-teal-100 rounded-xl p-4 shadow-sm">
+                <div class="flex items-center mb-2"><i data-lucide="presentation" class="w-5 h-5 text-teal-600 mr-2"></i><span class="text-sm font-semibold text-teal-700">定着</span></div>
+                <p class="text-xs text-slate-500">教育資料とダッシュボードで運用を定着</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute -inset-4 bg-teal-100 rounded-3xl blur-3xl opacity-70"></div>
+            <div class="relative section-card rounded-3xl p-8">
+              <h2 class="text-slate-900 text-2xl font-semibold mb-4">財務戦略に効くfreeeの使い方を構築</h2>
+              <ul class="space-y-3 text-sm text-slate-600">
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-teal-500 mt-0.5"></i><span>融資・格付を見据えたデータ構造で銀行資料にも即対応</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-teal-500 mt-0.5"></i><span>「自動で経理」やAPI連携を作り込み、手入力を極小化</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-teal-500 mt-0.5"></i><span>記帳代行・BPOと連携し、稼働時間と月額コストを削減</span></li>
+              </ul>
+              <div class="mt-6 bg-teal-50 border border-teal-200 rounded-2xl p-4 text-center">
+                <p class="text-xs uppercase tracking-[0.2em] text-teal-600 font-semibold">Outcome</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">翌月5営業日の月次締めとリアルタイム経営を実現</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <section class="section rounded-xl p-6 mb-8">
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-teal-50 border border-teal-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="settings" class="w-5 h-5 text-teal-600 mr-2"></i><span class="font-semibold text-teal-700">設計</span></div>
-          <p class="text-sm text-slate-600">勘定科目・部門・タグ・承認フローを現場に合わせて最適設計。</p>
-        </div>
-        <div class="bg-teal-50 border border-teal-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="link" class="w-5 h-5 text-teal-600 mr-2"></i><span class="font-semibold text-teal-700">連携</span></div>
-          <p class="text-sm text-slate-600">証憑/銀行/カード/請求のデータ連携と仕訳自動化を構築。</p>
-        </div>
-        <div class="bg-teal-50 border border-teal-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="presentation" class="w-5 h-5 text-teal-600 mr-2"></i><span class="font-semibold text-teal-700">定着</span></div>
-          <p class="text-sm text-slate-600">運用ルールと教育資料を整備。ダッシュボードでKPIを可視化。</p>
-        </div>
+    <main class="relative -mt-16 pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <!-- Why choose us -->
+        <section class="rounded-3xl bg-white border border-slate-200 shadow-xl shadow-teal-100/70 p-8 sm:p-10 mb-12">
+          <div class="text-center mb-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-teal-500">Why Us</p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">選ばれる理由</h2>
+            <p class="mt-4 text-sm sm:text-base text-slate-600">財務・業務の両面からfreee導入を伴走し、継続的に使える仕組みを構築します。</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4 text-sm text-slate-600">
+            <div class="rounded-2xl border border-teal-100 bg-teal-50/60 p-5">
+              <div class="flex items-center mb-2"><i data-lucide="landmark" class="w-5 h-5 text-teal-600 mr-2"></i><span class="font-semibold">財務のプロが設計</span></div>
+              <p>融資・格付を見据えた勘定科目/部門/タグ構造。将来の銀行評価に効くデータ基盤を構築。</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5">
+              <div class="flex items-center mb-2"><i data-lucide="cpu" class="w-5 h-5 text-teal-600 mr-2"></i><span class="font-semibold">徹底自動化</span></div>
+              <p>「自動で経理」ルールやAPI連携を設定し、担当者は確認・分析中心へシフト。</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5">
+              <div class="flex items-center mb-2"><i data-lucide="sparkles" class="w-5 h-5 text-teal-600 mr-2"></i><span class="font-semibold">連携で効果最大化</span></div>
+              <p>記帳代行・BPOや生成AI・自動化支援と連動し、工数削減と意思決定スピードを両立。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="section-card rounded-3xl p-8 sm:p-10 mb-12">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.3em] text-teal-500">Pricing</p>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">料金プラン（税別）</h2>
+              <p class="mt-3 text-sm sm:text-base text-slate-600">企業規模とスコープに応じて、ライト・スタンダード・プレミアムのプランをご用意。顧問企業は10〜20%優遇します。</p>
+            </div>
+            <a href="mailto:contact@yourcompany.com?subject=freee導入支援の料金について" class="inline-flex items-center gap-2 self-start bg-teal-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:bg-teal-700"><i data-lucide="calculator" class="w-4 h-4"></i>見積り相談</a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="rounded-2xl border border-teal-100 bg-teal-50/60 p-6 flex flex-col">
+              <p class="font-semibold text-teal-700 mb-1">ライト</p>
+              <p class="text-3xl font-bold text-slate-900">100,000円</p>
+              <p class="text-sm text-emerald-600 font-semibold mt-1">顧問: 90,000円</p>
+              <ul class="list-disc pl-5 mt-3 space-y-1 text-sm text-slate-600">
+                <li>初期設定（事業所/勘定科目）</li>
+                <li>銀行/カード連携（5口座まで）</li>
+                <li>基本操作レクチャー（60分）</li>
+              </ul>
+              <p class="text-xs text-slate-500 mt-4">まず試験導入したい個人事業主・小規模法人向け。</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col">
+              <p class="font-semibold text-slate-800 mb-1">スタンダード</p>
+              <p class="text-3xl font-bold text-slate-900">350,000円</p>
+              <p class="text-sm text-emerald-600 font-semibold mt-1">顧問: 297,500円</p>
+              <ul class="list-disc pl-5 mt-3 space-y-1 text-sm text-slate-600">
+                <li>ライトの内容</li>
+                <li><span class="font-semibold">旧会計ソフトからのデータ移行</span></li>
+                <li><span class="font-semibold">「自動で経理」ルール設定100件</span></li>
+                <li>請求書テンプレ作成・操作レクチャー（120分）</li>
+              </ul>
+              <p class="text-xs text-slate-500 mt-4">過去データも含め本格的に自動化したい企業向け。</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col">
+              <p class="font-semibold text-slate-800 mb-1">プレミアム（3〜6ヶ月）</p>
+              <p class="text-3xl font-bold text-slate-900">1,000,000円〜</p>
+              <p class="text-sm text-emerald-600 font-semibold mt-1">顧問: 800,000円〜</p>
+              <ul class="list-disc pl-5 mt-3 space-y-1 text-sm text-slate-600">
+                <li>スタンダードの内容</li>
+                <li><span class="font-semibold">部門別/セグメント別設定</span></li>
+                <li><span class="font-semibold">API連携による独自ワークフロー構築</span></li>
+                <li>カスタムレポート・経理チーム研修</li>
+              </ul>
+              <p class="text-xs text-slate-500 mt-4">複数部門・拠点を持ち管理会計基盤にしたい企業向け。</p>
+            </div>
+          </div>
+          <p class="mt-6 text-xs sm:text-sm text-slate-500">スコープ・拠点数・連携範囲により費用は変動します。詳細はヒアリング後にお見積りいたします。</p>
+        </section>
+
+        <!-- Steps -->
+        <section class="rounded-3xl bg-white border border-slate-200 shadow-xl shadow-teal-100/70 p-8 sm:p-10 mb-12">
+          <div class="text-center mb-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-teal-500">Implementation</p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">導入ステップ</h2>
+            <p class="mt-4 text-sm sm:text-base text-slate-600">要件整理から運用定着まで、貴社の経理体制に合わせて伴走します。</p>
+          </div>
+          <div class="space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-teal-50 border border-teal-100 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-teal-600 text-white font-bold text-lg">01</span>
+                <h3 class="text-lg font-semibold text-slate-900">要件整理</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">現場ヒアリングと既存データ分析で導入スコープと課題を明確化。</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-white border border-slate-200 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-teal-600 text-white font-bold text-lg">02</span>
+                <h3 class="text-lg font-semibold text-slate-900">設計</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">科目・部門・タグ・承認/申請フロー・取引テンプレートを設計。</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-white border border-slate-200 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-teal-600 text-white font-bold text-lg">03</span>
+                <h3 class="text-lg font-semibold text-slate-900">連携設定</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">証憑・銀行・カード・外部SaaS連携、自動仕訳ルールを実装。</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-white border border-slate-200 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-teal-600 text-white font-bold text-lg">04</span>
+                <h3 class="text-lg font-semibold text-slate-900">運用開始</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">教育・マニュアル・ダッシュボードを整備し、定着と改善をサポート。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="rounded-3xl bg-teal-600 text-white p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-teal-100">Next Step</p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-bold">無料ヒアリングで導入設計を提案</h2>
+            <p class="mt-4 text-sm sm:text-base text-teal-100 leading-7">60分のヒアリングで、理想の運用像と必要なスコープを整理。最適なプランをご提示します。</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <a href="mailto:contact@yourcompany.com?subject=freee導入支援の相談について" class="inline-flex items-center gap-3 bg-white text-teal-600 font-semibold px-6 py-3 rounded-full shadow-lg shadow-teal-900/30 hover:bg-teal-50"><i data-lucide="clipboard-check" class="w-5 h-5"></i>ヒアリングを予約</a>
+            <a href="サービス概要と料金体系.html" class="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm"><i data-lucide="info" class="w-4 h-4"></i>他サービスも見る</a>
+          </div>
+        </section>
       </div>
-    </section>
-
-    <!-- Why us -->
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">選ばれる理由</h2>
-      <div class="grid md:grid-cols-3 gap-4 text-slate-700 text-sm">
-        <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="landmark" class="w-5 h-5 text-teal-600 mr-2"></i><span class="font-semibold">財務のプロが設計</span></div>
-          <p>融資・格付を見据えた勘定科目/部門/タグ設計。将来の銀行評価/分析に効くデータ構造を構築。</p>
-        </div>
-        <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="cpu" class="w-5 h-5 text-teal-600 mr-2"></i><span class="font-semibold">徹底自動化</span></div>
-          <p>「自動で経理」ルールやAPI連携を作り込み、手入力を極小化。担当者は確認中心へ。</p>
-        </div>
-        <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="sparkles" class="w-5 h-5 text-teal-600 mr-2"></i><span class="font-semibold">連携で効果最大化</span></div>
-          <p>記帳代行・BPOと連携し、<span class="font-semibold">利用時間を圧縮→月額コスト削減</span>。顧問運用で意思決定も高速化。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Plans -->
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">料金プラン（税別）</h2>
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-white border border-slate-200 rounded-lg p-5 flex flex-col">
-          <p class="font-semibold text-slate-800 mb-1">ライト</p>
-          <p class="price-tag text-slate-800">100,000円</p>
-          <p class="text-green-700 font-semibold mt-1">顧問: 90,000円</p>
-          <ul class="list-disc pl-5 mt-2 text-sm text-slate-600 space-y-1">
-            <li>初期設定（事業所/勘定科目）</li>
-            <li>銀行/カード連携（5口座まで）</li>
-            <li>基本操作レクチャー（60分）</li>
-          </ul>
-          <p class="text-xs text-slate-500 mt-3">まずは使い始めたい個人事業主・小規模法人向け</p>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-lg p-5 flex flex-col">
-          <p class="font-semibold text-slate-800 mb-1">スタンダード</p>
-          <p class="price-tag text-slate-800">350,000円</p>
-          <p class="text-green-700 font-semibold mt-1">顧問: 297,500円</p>
-          <ul class="list-disc pl-5 mt-2 text-sm text-slate-600 space-y-1">
-            <li>ライトの内容</li>
-            <li><span class="font-semibold">旧会計ソフトからのデータ移行</span></li>
-            <li><span class="font-semibold">「自動で経理」ルール設定100件</span></li>
-            <li>請求書テンプレ作成・操作レクチャー（120分）</li>
-          </ul>
-          <p class="text-xs text-slate-500 mt-3">過去データも一元化し本格的に自動化したい企業向け</p>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-lg p-5 flex flex-col">
-          <p class="font-semibold text-slate-800 mb-1">プレミアム（3〜6ヶ月）</p>
-          <p class="price-tag text-slate-800">1,000,000円〜</p>
-          <p class="text-green-700 font-semibold mt-1">顧問: 800,000円〜</p>
-          <ul class="list-disc pl-5 mt-2 text-sm text-slate-600 space-y-1">
-            <li>スタンダードの内容</li>
-            <li><span class="font-semibold">部門別/セグメント別設定</span></li>
-            <li><span class="font-semibold">API連携による独自ワークフロー構築</span></li>
-            <li>カスタムレポート・経理チーム研修</li>
-          </ul>
-          <p class="text-xs text-slate-500 mt-3">複数部門/拠点を持ち、管理会計基盤にしたい企業向け</p>
-        </div>
-      </div>
-      <p class="text-xs text-slate-500 mt-3">スコープ・拠点数・連携範囲により変動します。</p>
-    </section>
-
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">導入ステップ</h2>
-      <ol class="list-decimal pl-5 space-y-2">
-        <li>要件整理（現場ヒアリング/既存データ分析）</li>
-        <li>設計（科目/部門/タグ/承認・申請/取引テンプレート）</li>
-        <li>連携設定（証憑/銀行/カード/外部SaaS）</li>
-        <li>運用開始（教育/マニュアル/ダッシュボード）</li>
-      </ol>
-    </section>
-
-    <section class="section rounded-xl p-6 text-center">
-      <a href="mailto:contact@yourcompany.com?subject=freee導入支援の相談について" class="inline-block bg-teal-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-teal-700">問い合わせる</a>
-    </section>
+    </main>
   </div>
   <script>lucide.createIcons();</script>
 </body>

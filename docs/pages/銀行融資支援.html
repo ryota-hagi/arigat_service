@@ -3,113 +3,195 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>銀行融資支援｜サービス詳細</title>
+  <title>銀行融資支援｜金融機関と歩む資金調達</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
-    body { font-family: 'Inter','Noto Sans JP',sans-serif; background:#f0f4f8; }
-    .gradient-text { background: linear-gradient(to right, #1e3a8a, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .section { background:#fff; border:1px solid #e5e7eb; box-shadow:0 4px 12px rgba(0,0,0,.05) }
-    .price-tag { font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; }
-    .section-title { text-align:center; margin-bottom:2rem; font-size:2.25rem; line-height:2.5rem; font-weight:700; color:#1f2937; }
+    body { font-family: 'Inter','Noto Sans JP',sans-serif; }
+    .hero-gradient { background: linear-gradient(135deg, #e0f2ff 0%, #dbeafe 35%, #ffffff 100%); }
+    .section-card { background: #ffffff; border: 1px solid #e5e7eb; box-shadow: 0 12px 30px rgba(30, 64, 175, .12); }
+    .pill { background: rgba(59, 130, 246, .12); color: #1d4ed8; }
   </style>
-  <meta name="description" content="銀行融資支援の詳細。着手金0円、顧問先は成功報酬2.5%（通常5%）。事前打診から稟議想定Q&A、面談同席、条件交渉まで一貫伴走。" />
+  <meta name="description" content="着手金0円で事前打診から稟議想定Q&A、面談同席、条件交渉、実行後のフォローまで伴走する銀行融資支援。顧問企業は成功報酬2.5%。" />
 </head>
-<body class="text-slate-700">
-  <div class="container mx-auto p-4 sm:p-8 max-w-7xl">
-    <div class="flex items-center justify-between mb-4">
-      <a href="サービス概要と料金体系.html" class="text-blue-700 hover:underline flex items-center"><i data-lucide="arrow-left" class="w-5 h-5 mr-1"></i>戻る</a>
-    </div>
-    <header class="text-center mb-8">
-      <h1 class="text-4xl font-bold gradient-text mb-2">銀行融資支援</h1>
-      <p class="text-slate-600">事前打診から実行まで、金融機関視点で一気通貫に伴走</p>
+<body class="bg-slate-50 text-slate-700">
+  <div class="min-h-screen">
+    <header class="relative hero-gradient">
+      <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-20">
+        <div class="flex items-center justify-between mb-6">
+          <a href="サービス概要と料金体系.html" class="text-blue-700 hover:text-blue-900 flex items-center text-sm font-semibold"><i data-lucide="arrow-left" class="w-5 h-5 mr-1"></i>サービス一覧へ戻る</a>
+          <a href="mailto:contact@yourcompany.com?subject=銀行融資支援の相談について" class="hidden sm:inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700"><i data-lucide="handshake" class="w-4 h-4"></i>相談を予約</a>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <span class="pill inline-flex items-center px-3 py-1 rounded-full uppercase tracking-wider text-xs font-semibold">Bank Financing</span>
+            <h1 class="mt-4 text-4xl sm:text-5xl font-bold text-slate-900 leading-tight">銀行融資支援<span class="block text-blue-600 text-3xl sm:text-4xl font-semibold mt-2">与信ロジックに沿って調達を成功に導く</span></h1>
+            <p class="mt-6 text-base sm:text-lg text-slate-600 leading-7">元銀行員の知見で、事前打診から稟議想定Q&A、面談同席、条件交渉、実行後フォローまで伴走。顧問企業様は着手金0円・成功報酬2.5%で、スピードと条件を同時に高めます。</p>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="bg-white/70 border border-blue-100 rounded-xl p-4 shadow-sm">
+                <div class="flex items-center mb-2"><i data-lucide="compass" class="w-5 h-5 text-blue-600 mr-2"></i><span class="text-sm font-semibold text-blue-700">事前打診設計</span></div>
+                <p class="text-xs text-slate-500">必要資金・借入構成を定量設計</p>
+              </div>
+              <div class="bg-white/70 border border-blue-100 rounded-xl p-4 shadow-sm">
+                <div class="flex items-center mb-2"><i data-lucide="list-checks" class="w-5 h-5 text-blue-600 mr-2"></i><span class="text-sm font-semibold text-blue-700">稟議想定Q&amp;A</span></div>
+                <p class="text-xs text-slate-500">与信ロジックで論点を整理</p>
+              </div>
+              <div class="bg-white/70 border border-blue-100 rounded-xl p-4 shadow-sm">
+                <div class="flex items-center mb-2"><i data-lucide="scale" class="w-5 h-5 text-blue-600 mr-2"></i><span class="text-sm font-semibold text-blue-700">条件交渉</span></div>
+                <p class="text-xs text-slate-500">金利・期間・コベナンツを最適化</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute -inset-4 bg-blue-100 rounded-3xl blur-3xl opacity-70"></div>
+            <div class="relative section-card rounded-3xl p-8">
+              <h2 class="text-slate-900 text-2xl font-semibold mb-4">成功報酬型で成果にコミット</h2>
+              <ul class="space-y-3 text-sm text-slate-600">
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-500 mt-0.5"></i><span>調達目的・返済余力・工程表を明確化し、複数行戦略を立案</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-500 mt-0.5"></i><span>事前打診資料と稟議想定Q&amp;Aで面談前に合意形成を準備</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-500 mt-0.5"></i><span>実行後は資金繰り・格付KPIをモニタリングし、次の調達に接続</span></li>
+              </ul>
+              <div class="mt-6 bg-blue-50 border border-blue-200 rounded-2xl p-4 text-center">
+                <p class="text-xs uppercase tracking-[0.2em] text-blue-600 font-semibold">Advisor Benefit</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">顧問企業は成功報酬2.5%（通常5%）を適用</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <!-- Summary -->
-    <section class="section rounded-xl p-6 mb-8">
-      <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row gap-4">
-        <p class="md:max-w-3xl leading-relaxed">
-          金融機関の与信評価を踏まえ、<span class="font-semibold text-slate-800">事前打診の設計→稟議想定Q&A→面談準備/同席→条件交渉→実行</span>まで一気通貫で伴走します。<span class="font-semibold text-green-700">顧問企業様は成功報酬2.5%</span>（<span class="text-slate-500">通常5%</span>）を適用します。
-        </p>
-        <div class="text-sm text-slate-500">最終更新: 2025-09-02</div>
-      </div>
-      <div class="mt-5 flex items-start gap-3 bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-        <i data-lucide="badge-check" class="w-5 h-5 text-emerald-600 mt-0.5"></i>
-        <p class="text-sm text-emerald-700">
-          顧問特典: <span class="font-semibold">着手金0円・成功報酬2.5%</span>。事前打診の質とスピードを高め、<span class="font-semibold">条件最適化（金利/期間/コベナンツ）</span>を狙います。
-        </p>
-      </div>
-    </section>
+    <main class="relative -mt-16 pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <!-- Pricing -->
+        <section class="section-card rounded-3xl p-8 sm:p-10 mb-12">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-widest text-blue-500">Pricing</p>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">成功報酬型の料金体系</h2>
+              <p class="mt-3 text-sm sm:text-base text-slate-600 leading-6">成果に連動する報酬体系で、調達規模に応じた公平なフィー設計。顧問企業は着手金0円・報酬率半額でご利用いただけます。</p>
+            </div>
+            <a href="mailto:contact@yourcompany.com?subject=銀行融資支援の料金について" class="inline-flex items-center gap-2 self-start bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:bg-blue-700"><i data-lucide="calculator" class="w-4 h-4"></i>見積り相談</a>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="rounded-2xl border border-blue-100 bg-blue-50/70 p-6 text-center">
+              <p class="text-sm font-medium text-blue-600">着手金</p>
+              <p class="mt-3 text-3xl font-bold text-slate-900">0円</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center">
+              <p class="text-sm font-medium text-blue-600">成功報酬（顧問）</p>
+              <p class="mt-3 text-3xl font-bold text-emerald-600">2.5%</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center">
+              <p class="text-sm font-medium text-slate-500">成功報酬（通常）</p>
+              <p class="mt-3 text-3xl font-bold text-slate-800">5%</p>
+            </div>
+          </div>
+          <p class="mt-6 text-xs sm:text-sm text-slate-500">成功の定義や最低報酬は個別契約にて明記します。複数行同時案件や大型案件は別途協議いたします。</p>
+        </section>
 
-    <!-- Pricing -->
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">料金</h2>
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-slate-50 rounded-lg p-5 border border-slate-200">
-          <p class="text-slate-500 mb-1">着手金</p>
-          <p class="text-2xl font-bold text-blue-700">0円</p>
-        </div>
-        <div class="bg-slate-50 rounded-lg p-5 border border-slate-200">
-          <p class="text-slate-500 mb-1">成功報酬（顧問）</p>
-          <p class="text-2xl font-bold text-green-700">2.5%</p>
-        </div>
-        <div class="bg-slate-50 rounded-lg p-5 border border-slate-200">
-          <p class="text-slate-500 mb-1">成功報酬（通常）</p>
-          <p class="text-2xl font-bold text-slate-600">5%</p>
-        </div>
+        <!-- Flow -->
+        <section class="rounded-3xl bg-white border border-slate-200 shadow-xl shadow-blue-100/50 p-8 sm:p-10 mb-12">
+          <div class="text-center mb-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">Process</p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">導入から実行までのステップ</h2>
+            <p class="mt-4 text-sm sm:text-base text-slate-600">調達目的とスケジュールに合わせて最短距離で進行します。</p>
+          </div>
+          <div class="space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-blue-50 border border-blue-100 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-lg">01</span>
+                <h3 class="text-lg font-semibold text-slate-900">初回面談</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">調達目的・金額・返済余力・希望スケジュールを確認し、必要資料と関係行を整理します。</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-white border border-slate-200 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-lg">02</span>
+                <h3 class="text-lg font-semibold text-slate-900">提案・見積り</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">戦略、必要資料、想定条件、工程表を提示し、複数行戦略も含めた打ち手を合意します。</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-white border border-slate-200 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-lg">03</span>
+                <h3 class="text-lg font-semibold text-slate-900">事前打診〜面談</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">事前打診の設計、稟議想定Q&amp;A準備、面談同行を実施し、条件交渉まで伴走します。</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-white border border-slate-200 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-lg">04</span>
+                <h3 class="text-lg font-semibold text-slate-900">実行後フォロー</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">資金繰り・格付KPIをモニタリングし、次の借換や追加調達につながる改善提案を行います。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Scope Section -->
+        <section class="section-card rounded-3xl p-8 sm:p-10 mb-12">
+          <div class="grid lg:grid-cols-2 gap-10">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">Scope</p>
+              <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">支援範囲</h2>
+              <p class="mt-4 text-sm sm:text-base text-slate-600 leading-7">調達計画の策定から実行後のモニタリングまで一連のプロセスをカバーします。</p>
+            </div>
+            <div class="space-y-4">
+              <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                <h3 class="flex items-center text-base font-semibold text-slate-900 mb-2"><i data-lucide="layout-dashboard" class="w-5 h-5 text-blue-500 mr-2"></i>資金・借入構成の設計</h3>
+                <p class="text-sm text-slate-600">必要資金、返済可能額、借入構成、複数行戦略の設計。</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                <h3 class="flex items-center text-base font-semibold text-slate-900 mb-2"><i data-lucide="files" class="w-5 h-5 text-blue-500 mr-2"></i>事前打診・稟議資料</h3>
+                <p class="text-sm text-slate-600">サマリー、根拠データ、KPI、稟議想定Q&amp;Aの準備。</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                <h3 class="flex items-center text-base font-semibold text-slate-900 mb-2"><i data-lucide="messages-square" class="w-5 h-5 text-blue-500 mr-2"></i>面談同行と条件交渉</h3>
+                <p class="text-sm text-slate-600">面談資料作成、同席、金利・期間・コベナンツ交渉。</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                <h3 class="flex items-center text-base font-semibold text-slate-900 mb-2"><i data-lucide="monitor" class="w-5 h-5 text-blue-500 mr-2"></i>実行後モニタリング</h3>
+                <p class="text-sm text-slate-600">資金繰り・格付KPIを顧問運用に統合し、次の調達余力を高めます。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Key points -->
+        <section class="rounded-3xl bg-gradient-to-r from-blue-50 via-white to-blue-50 border border-blue-200 p-8 sm:p-10 mb-12">
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white border border-blue-100 rounded-2xl p-6 shadow-sm">
+              <div class="flex items-center mb-3"><i data-lucide="gauge" class="w-5 h-5 text-blue-600 mr-2"></i><span class="text-sm font-semibold text-blue-700">条件最適化</span></div>
+              <p class="text-sm text-slate-600 leading-relaxed">金利・期間・コベナンツを定量比較し、企業価値に直結する条件を追求します。</p>
+            </div>
+            <div class="bg-white border border-blue-100 rounded-2xl p-6 shadow-sm">
+              <div class="flex items-center mb-3"><i data-lucide="network" class="w-5 h-5 text-blue-600 mr-2"></i><span class="text-sm font-semibold text-blue-700">複数行ポートフォリオ</span></div>
+              <p class="text-sm text-slate-600 leading-relaxed">借換・追加調達・分散を通じて調達余力と金融機関との関係性を強化します。</p>
+            </div>
+            <div class="bg-white border border-blue-100 rounded-2xl p-6 shadow-sm">
+              <div class="flex items-center mb-3"><i data-lucide="list-checks" class="w-5 h-5 text-blue-600 mr-2"></i><span class="text-sm font-semibold text-blue-700">稟議想定Q&amp;A</span></div>
+              <p class="text-sm text-slate-600 leading-relaxed">与信ロジックに沿った想定問答を準備し、可否と条件の精度を高めます。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="rounded-3xl bg-blue-600 text-white p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-100">Next Step</p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-bold">資金調達のご相談を受け付けています</h2>
+            <p class="mt-4 text-sm sm:text-base text-blue-100 leading-7">調達目的と期日をご共有いただければ、最適なスキームと工程をご提案します。相談だけでもお気軽に。</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <a href="mailto:contact@yourcompany.com?subject=銀行融資支援の相談について" class="inline-flex items-center gap-3 bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow-lg shadow-blue-900/30 hover:bg-blue-50"><i data-lucide="clipboard-check" class="w-5 h-5"></i>相談を予約</a>
+            <a href="サービス概要と料金体系.html" class="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm"><i data-lucide="info" class="w-4 h-4"></i>他サービスも見る</a>
+          </div>
+        </section>
       </div>
-      <p class="text-sm text-slate-500 mt-3">成功の定義・最低報酬等は個別契約書にて明記します。</p>
-    </section>
-
-    <!-- Scope -->
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">支援範囲（抜粋）</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><span class="font-semibold text-slate-800">必要資金・返済可能額・借入構成</span>の設計、<span class="text-blue-700 font-semibold">複数行戦略</span>の立案</li>
-        <li>事前打診の作り込み（サマリー/根拠データ/KPI）</li>
-        <li><span class="font-semibold">稟議想定Q&A</span>の準備、面談資料/同席支援</li>
-        <li><span class="text-emerald-700 font-semibold">条件交渉（期間・金利・コベナンツ等）</span>、実行まで伴走</li>
-        <li>実行後の資金繰り・格付KPIモニタリング（顧問運用に統合）</li>
-      </ul>
-    </section>
-
-    <!-- Steps -->
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">導入ステップ</h2>
-      <ol class="list-decimal pl-5 space-y-2">
-        <li>初回面談（60–90分）：<span class="font-semibold">調達目的/金額/返済余力/スケジュール</span>を確認</li>
-        <li>ご提案・お見積り：<span class="text-blue-700 font-semibold">戦略・必要資料・想定条件・工程</span>を提示</li>
-        <li>契約・着手：事前打診→面談→<span class="text-emerald-700 font-semibold">条件交渉</span>→実行</li>
-        <li>実行後：資金繰りと格付KPIに反映し、次の最適化を提案</li>
-      </ol>
-    </section>
-
-    <!-- Key Points -->
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">キーポイント</h2>
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="gauge" class="w-5 h-5 text-emerald-600 mr-2"></i><span class="font-semibold text-emerald-700">条件最適化</span></div>
-          <p class="text-sm text-slate-600 leading-relaxed">金利/期間/コベナンツを交渉設計で<em>定量比較</em>し、最適条件を追求。</p>
-        </div>
-        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="network" class="w-5 h-5 text-blue-600 mr-2"></i><span class="font-semibold text-blue-700">複数行ポートフォリオ</span></div>
-          <p class="text-sm text-slate-600 leading-relaxed">借換・追加調達・分散で、<span class="font-semibold">調達余力</span>と関係性を強化。</p>
-        </div>
-        <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="list-checks" class="w-5 h-5 text-amber-600 mr-2"></i><span class="font-semibold text-amber-700">稟議想定Q&A</span></div>
-          <p class="text-sm text-slate-600 leading-relaxed">与信ロジックに沿った論点整理で、<span class="font-semibold">可否と条件</span>の精度を高めます。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section rounded-xl p-6 text-center">
-      <div class="mt-1">
-        <a href="mailto:contact@yourcompany.com?subject=銀行融資支援の相談について" class="inline-block bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700">問い合わせる</a>
-      </div>
-    </section>
+    </main>
   </div>
   <script>lucide.createIcons();</script>
 </body>

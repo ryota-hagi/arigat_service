@@ -3,183 +3,249 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>生成AI・自動化支援｜サービス詳細</title>
+  <title>生成AI・自動化支援｜業務を賢く高速化</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
-    body { font-family: 'Inter','Noto Sans JP',sans-serif; background:#f0f4f8; }
-    .gradient-text { background: linear-gradient(to right, #6d28d9, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .section { background:#fff; border:1px solid #e5e7eb; box-shadow:0 4px 12px rgba(0,0,0,.05) }
-    .price-tag { font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; }
+    body { font-family: 'Inter','Noto Sans JP',sans-serif; }
+    .hero-gradient { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 35%, #ffffff 100%); }
+    .section-card { background: #ffffff; border: 1px solid #e5e7eb; box-shadow: 0 12px 30px rgba(109, 40, 217, .12); }
+    .pill { background: rgba(168, 85, 247, .14); color: #6d28d9; }
   </style>
+  <meta name="description" content="証憑AI読取やZapier/Makeを活用し、請求・仕訳・集計・情報発信の自動化を設計。ROI6〜12ヶ月で投資回収を目指す生成AI・自動化支援サービス。" />
 </head>
-<body class="text-slate-700">
-  <div class="container mx-auto p-4 sm:p-8 max-w-7xl">
-    <div class="flex items-center justify-between mb-4">
-      <a href="サービス概要と料金体系.html" class="text-purple-700 hover:underline flex items-center"><i data-lucide="arrow-left" class="w-5 h-5 mr-1"></i>戻る</a>
-    </div>
-    <header class="text-center mb-8">
-      <h1 class="text-4xl font-bold gradient-text mb-2">生成AI・自動化支援</h1>
-      <p class="text-slate-600">請求・証憑・仕訳・集計を賢く自動化。バックオフィスを高速化</p>
+<body class="bg-slate-50 text-slate-700">
+  <div class="min-h-screen">
+    <header class="relative hero-gradient">
+      <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-20">
+        <div class="flex items-center justify-between mb-6">
+          <a href="サービス概要と料金体系.html" class="text-purple-700 hover:text-purple-900 flex items-center text-sm font-semibold"><i data-lucide="arrow-left" class="w-5 h-5 mr-1"></i>サービス一覧へ戻る</a>
+          <a href="mailto:contact@yourcompany.com?subject=生成AI・自動化支援の相談について" class="hidden sm:inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg shadow-purple-200 hover:bg-purple-700"><i data-lucide="sparkles" class="w-4 h-4"></i>相談を予約</a>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <span class="pill inline-flex items-center px-3 py-1 rounded-full uppercase tracking-wider text-xs font-semibold">AI &amp; Automation</span>
+            <h1 class="mt-4 text-4xl sm:text-5xl font-bold text-slate-900 leading-tight">生成AI・自動化支援<span class="block text-purple-700 text-3xl sm:text-4xl font-semibold mt-2">単純作業を90%以上削減し、価値創造に時間を投資</span></h1>
+            <p class="mt-6 text-base sm:text-lg text-slate-600 leading-7">請求・証憑・仕訳・集計・情報発信まで、業務のボトルネックを診断し最適なAI・自動化ツールを組み合わせます。ROI 6〜12ヶ月で投資回収できる設計を掲げ、バックオフィスを高速化します。</p>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="bg-white/70 border border-purple-100 rounded-xl p-4 shadow-sm">
+                <div class="flex items-center mb-2"><i data-lucide="file-text" class="w-5 h-5 text-purple-600 mr-2"></i><span class="text-sm font-semibold text-purple-700">証憑AI読取</span></div>
+                <p class="text-xs text-slate-500">OCR×LLMで請求・領収書を自動仕訳</p>
+              </div>
+              <div class="bg-white/70 border border-purple-100 rounded-xl p-4 shadow-sm">
+                <div class="flex items-center mb-2"><i data-lucide="workflow" class="w-5 h-5 text-purple-600 mr-2"></i><span class="text-sm font-semibold text-purple-700">ワークフロー</span></div>
+                <p class="text-xs text-slate-500">Zapier/Makeで承認～レポートを自動化</p>
+              </div>
+              <div class="bg-white/70 border border-purple-100 rounded-xl p-4 shadow-sm">
+                <div class="flex items-center mb-2"><i data-lucide="gauge" class="w-5 h-5 text-purple-600 mr-2"></i><span class="text-sm font-semibold text-purple-700">ROI設計</span></div>
+                <p class="text-xs text-slate-500">工数削減とKPIを可視化し投資を意思決定</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute -inset-4 bg-purple-200 rounded-3xl blur-3xl opacity-60"></div>
+            <div class="relative section-card rounded-3xl p-8">
+              <h2 class="text-slate-900 text-2xl font-semibold mb-4">「人」に任せる仕事を再定義</h2>
+              <ul class="space-y-3 text-sm text-slate-600">
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-purple-500 mt-0.5"></i><span>財務×業務のダブル視点でボトルネックを診断し、優先順位を明確化</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-purple-500 mt-0.5"></i><span>最適なAI/自動化ツールを選定し、御社専用の業務レシピに落とし込み</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-purple-500 mt-0.5"></i><span>運用ルール・権限・監査ログまで整備し、安全にスケール</span></li>
+              </ul>
+              <div class="mt-6 bg-purple-50 border border-purple-200 rounded-2xl p-4 text-center">
+                <p class="text-xs uppercase tracking-[0.2em] text-purple-600 font-semibold">Result</p>
+                <p class="mt-2 text-lg font-semibold text-slate-900">単純作業を90%以上削減し、創造的業務へシフト</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <!-- Problem statement -->
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">その仕事、まだ「人」がやっていますか？</h2>
-      <ul class="list-disc pl-5 space-y-2 text-slate-700">
-        <li>同じ問い合わせにメール/電話で都度対応している</li>
-        <li>SNSやブログのネタ出し・記事作成に時間がかかる</li>
-        <li>会議の議事録作成や要約が負担</li>
-        <li>経理・労務のデータ入力/転記から解放されたい</li>
-      </ul>
-      <p class="text-sm text-slate-500 mt-3">これらの単純作業を90%以上削減し、創造的な仕事に集中できる環境をつくります。</p>
-    </section>
-
-    <section class="section rounded-xl p-6 mb-8">
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="file-text" class="w-5 h-5 text-purple-600 mr-2"></i><span class="font-semibold text-purple-700">証憑AI読取</span></div>
-          <p class="text-sm text-slate-600">請求書・領収書のOCR/LLM読取で自動仕訳の精度を向上。</p>
-        </div>
-        <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="workflow" class="w-5 h-5 text-purple-600 mr-2"></i><span class="font-semibold text-purple-700">ワークフロー</span></div>
-          <p class="text-sm text-slate-600">Zapier/MakeでSaaS連携。承認→計上→レポートを自動化。</p>
-        </div>
-        <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-          <div class="flex items-center mb-2"><i data-lucide="gauge" class="w-5 h-5 text-purple-600 mr-2"></i><span class="font-semibold text-purple-700">ROI設計</span></div>
-          <p class="text-sm text-slate-600">KPI/工数削減を事前試算し、<span class="font-semibold">ROI 6–12ヶ月</span>で回収設計。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why experts -->
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">なぜ専門家の支援が必要なのか？</h2>
-      <ol class="list-decimal pl-5 space-y-2 text-slate-700">
-        <li><span class="font-semibold">ボトルネック診断</span>: どこを自動化すれば効果が最大か、財務/業務の両面から見極め</li>
-        <li><span class="font-semibold">最適ツール選定</span>: 無数のAI/自動化ツールから、御社に合うものだけを組合せ</li>
-        <li><span class="font-semibold">「使えるAI」を育成</span>: マニュアルや過去ログを学習し、御社専用アシスタントを構築</li>
-      </ol>
-    </section>
-
-    <!-- What we do -->
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">具体的な支援内容</h2>
-      <div class="space-y-4 text-slate-700">
-        <div>
-          <p class="font-semibold">フェーズ1：業務プロセス診断</p>
-          <p class="text-sm">現状の業務フローをヒアリングし、自動化余地と費用対効果の高い施策を可視化。</p>
-        </div>
-        <div>
-          <p class="font-semibold">フェーズ2：自動化・AI導入支援</p>
-          <ul class="list-disc pl-5 text-sm space-y-1">
-            <li>バックオフィス自動化（請求→入金確認→リマインドまで）</li>
-            <li>WebサイトAIチャットボット（24時間一次対応）</li>
-            <li>コンテンツ生成AI（ブログ/SNS/メルマガのドラフト生成）</li>
-            <li>社内知恵袋AI（規程やマニュアルを学習し即時回答）</li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold">フェーズ3：運用・効果測定</p>
-          <p class="text-sm">定着支援、効果測定、継続的な改善提案まで伴走。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-2xl font-bold mb-4">料金体系</h2>
-      <p class="mb-4 text-slate-700">
-        当サービスは、お客様の課題と業務内容に合わせて最適なプランを設計する、<strong class="text-purple-700">完全お見積り制</strong>です。<br>
-        経営顧問サービスをご契約のお客様は、お見積り総額から<strong class="text-green-700">10-20%の割引</strong>が適用されます。
-      </p>
-
-      <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <div class="bg-slate-50 p-4 rounded-lg border">
-          <h4 class="font-semibold text-slate-800 mb-2">基本料金</h4>
-          <p class="text-slate-600">まずは小さく始めたいお客様のために、シンプルな自動化の基本料金を設定しています。</p>
-          <p class="mt-2 font-semibold">簡単なZap作成 (1つあたり): <span class="text-purple-700">30,000円</span></p>
-          <p class="text-sm text-green-700 font-semibold">(顧問契約者価格: 27,000円)</p>
-        </div>
-        <div class="bg-slate-50 p-4 rounded-lg border">
-          <h4 class="font-semibold text-slate-800 mb-2">お見積りに含まれる追加費用 (例)</h4>
-          <ul class="list-disc pl-5 text-sm text-slate-600 space-y-1">
-            <li>ヒアリング、業務フローの設計</li>
-            <li>Googleフォーム、スプレッドシート等の作成</li>
-            <li>各種ツールのアカウント取得、初期設定</li>
-            <li>AIのプロンプト設計、簡易チューニング</li>
-            <li>操作マニュアル作成、運用レクチャー</li>
-          </ul>
-        </div>
-      </div>
-
-      <hr class="my-6">
-
-      <h3 class="text-xl font-bold mb-4">料金事例（税別）</h3>
-      <div class="grid md:grid-cols-3 gap-4 text-slate-700 text-sm">
-        <div class="bg-white border border-slate-200 rounded-lg p-5 flex flex-col">
-          <h4 class="font-semibold mb-2 text-base">事例1：問い合わせ管理の自動化</h4>
-          <ul class="list-disc pl-5 space-y-1 flex-grow">
-            <li>Zapier設定（分岐処理あり）: 50,000円</li>
-            <li>Googleフォーム作成・設定: 15,000円</li>
-            <li>通知内容のカスタマイズ: 10,000円</li>
-          </ul>
-          <div class="mt-4 pt-2 border-t">
-            <p class="font-semibold">お見積り合計: <span class="text-lg">75,000円</span></p>
-            <p class="text-green-700 font-semibold">(顧問契約者価格: 63,750円〜)</p>
+    <main class="relative -mt-16 pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <!-- Problem Section -->
+        <section class="rounded-3xl bg-white border border-slate-200 shadow-xl shadow-purple-100/70 p-8 sm:p-10 mb-12">
+          <div class="text-center mb-8">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-purple-500">Pain Points</p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">その作業、本当に人がやるべきですか？</h2>
+            <p class="mt-4 text-sm sm:text-base text-slate-600">問い合わせ対応、コンテンツ作成、議事録作成、経理の転記作業など、まだ人が時間をかけている領域をAIと自動化で刷新します。</p>
           </div>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-lg p-5 flex flex-col">
-          <h4 class="font-semibold mb-2 text-base">事例2：SNS・ブログ投稿の半自動化</h4>
-          <ul class="list-disc pl-5 space-y-1 flex-grow">
-            <li>AIプロンプト設計・最適化: 60,000円</li>
-            <li>Zapier設定（AI連携）: 40,000円</li>
-            <li>運用フロー設計・レクチャー: 20,000円</li>
+          <ul class="grid gap-3 sm:grid-cols-2 text-sm text-slate-600">
+            <li class="flex items-start gap-3 bg-purple-50/60 border border-purple-100 rounded-2xl p-4"><i data-lucide="mail" class="w-5 h-5 text-purple-600 mt-0.5"></i><span>同じ問い合わせに毎回メール/電話で対応している</span></li>
+            <li class="flex items-start gap-3 bg-purple-50/60 border border-purple-100 rounded-2xl p-4"><i data-lucide="pen-tool" class="w-5 h-5 text-purple-600 mt-0.5"></i><span>SNSやブログのネタ出し・下書きに時間がかかる</span></li>
+            <li class="flex items-start gap-3 bg-purple-50/60 border border-purple-100 rounded-2xl p-4"><i data-lucide="audio-lines" class="w-5 h-5 text-purple-600 mt-0.5"></i><span>会議の議事録や要約に人手が張りついている</span></li>
+            <li class="flex items-start gap-3 bg-purple-50/60 border border-purple-100 rounded-2xl p-4"><i data-lucide="rows" class="w-5 h-5 text-purple-600 mt-0.5"></i><span>経理・労務のデータ入力/転記から抜け出せない</span></li>
           </ul>
-          <div class="mt-4 pt-2 border-t">
-            <p class="font-semibold">お見積り合計: <span class="text-lg">120,000円</span></p>
-            <p class="text-green-700 font-semibold">(顧問契約者価格: 102,000円〜)</p>
+          <p class="mt-6 text-xs sm:text-sm text-slate-500 text-center">これらの単純作業を自動化し、創造的な仕事にリソースを再配置します。</p>
+        </section>
+
+        <!-- Why Experts -->
+        <section class="section-card rounded-3xl p-8 sm:p-10 mb-12">
+          <div class="grid lg:grid-cols-2 gap-10">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.3em] text-purple-500">Why Us</p>
+              <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">専門家が入る理由</h2>
+              <p class="mt-4 text-sm sm:text-base text-slate-600 leading-7">ツール選定だけでなく、データの流れや社内運用ルールの再設計が成功の鍵です。当社は財務視点でROIを捉えながら、運用定着まで伴走します。</p>
+            </div>
+            <ol class="space-y-4 list-decimal list-inside text-sm text-slate-600">
+              <li><span class="font-semibold">ボトルネック診断</span> — どこを自動化すれば効果が最大か、財務/業務の両面から見極めます。</li>
+              <li><span class="font-semibold">最適ツール選定</span> — 無数のAI/自動化ツールから、御社にフィットする構成だけを組み合わせます。</li>
+              <li><span class="font-semibold">「使えるAI」の育成</span> — マニュアルや過去ログを学習させ、御社専用アシスタントとして運用定着させます。</li>
+            </ol>
           </div>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-lg p-5 flex flex-col">
-          <h4 class="font-semibold mb-2 text-base">事例3：請求書発行〜入金管理の自動化</h4>
-          <ul class="list-disc pl-5 space-y-1 flex-grow">
-            <li>Zapier設定（freee・Gmail連携）: 60,000円</li>
-            <li>freee API設定・接続サポート: 30,000円</li>
-            <li>管理用スプレッドシート作成: 20,000円</li>
-            <li>エラーハンドリング設定: 15,000円</li>
-          </ul>
-          <div class="mt-4 pt-2 border-t">
-            <p class="font-semibold">お見積り合計: <span class="text-lg">125,000円</span></p>
-            <p class="text-green-700 font-semibold">(顧問契約者価格: 106,250円〜)</p>
+        </section>
+
+        <!-- Support Scope -->
+        <section class="rounded-3xl bg-white border border-slate-200 shadow-xl shadow-purple-100/70 p-8 sm:p-10 mb-12">
+          <div class="text-center mb-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-purple-500">Capabilities</p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">具体的な支援内容</h2>
+            <p class="mt-4 text-sm sm:text-base text-slate-600">現状診断からPoC、本実装、運用改善までフルサイクルで伴走します。</p>
           </div>
-        </div>
+          <div class="grid md:grid-cols-3 gap-5 text-sm text-slate-600">
+            <div class="rounded-2xl border border-purple-100 bg-purple-50/60 p-5">
+              <p class="font-semibold text-purple-700 mb-2">フェーズ1：業務プロセス診断</p>
+              <p>既存フローをヒアリングし、自動化余地と費用対効果の高い施策を可視化。</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5">
+              <p class="font-semibold text-purple-700 mb-2">フェーズ2：自動化・AI導入</p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>バックオフィス自動化（請求→入金確認→リマインド）</li>
+                <li>WebサイトAIチャットボット（24時間一次対応）</li>
+                <li>議事録要約・社内ナレッジ検索の仕組み化</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5">
+              <p class="font-semibold text-purple-700 mb-2">フェーズ3：運用・拡張</p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>権限・監査ログ・エラーハンドリングの整備</li>
+                <li>KPIやROIの可視化ダッシュボード</li>
+                <li>追加業務への展開・改善サイクル</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pricing Examples -->
+        <section class="section-card rounded-3xl p-8 sm:p-10 mb-12">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.3em] text-purple-500">Estimates</p>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">事例別お見積り（税別）</h2>
+              <p class="mt-3 text-sm sm:text-base text-slate-600">スコープとツール構成によって費用が変動します。顧問企業は10〜20%の優遇価格を適用。</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col">
+              <h3 class="font-semibold text-base mb-3">事例1：AI問い合わせ窓口</h3>
+              <ul class="list-disc pl-5 space-y-1 text-sm flex-grow">
+                <li>用途ヒアリング・情報整理: 45,000円</li>
+                <li>シナリオ/プロンプト設計: 85,000円</li>
+                <li>チャットボット実装・社内テスト: 40,000円</li>
+              </ul>
+              <div class="mt-4 pt-2 border-t">
+                <p class="font-semibold">合計: <span class="text-lg">170,000円</span></p>
+                <p class="text-green-600 font-semibold">顧問価格: 153,000円〜</p>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col">
+              <h3 class="font-semibold text-base mb-3">事例2：SNS・ブログ投稿の半自動化</h3>
+              <ul class="list-disc pl-5 space-y-1 text-sm flex-grow">
+                <li>AIプロンプト設計・最適化: 60,000円</li>
+                <li>Zapier設定（AI連携）: 40,000円</li>
+                <li>運用フロー設計・レクチャー: 20,000円</li>
+              </ul>
+              <div class="mt-4 pt-2 border-t">
+                <p class="font-semibold">合計: <span class="text-lg">120,000円</span></p>
+                <p class="text-green-600 font-semibold">顧問価格: 102,000円〜</p>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col">
+              <h3 class="font-semibold text-base mb-3">事例3：請求書発行〜入金管理の自動化</h3>
+              <ul class="list-disc pl-5 space-y-1 text-sm flex-grow">
+                <li>Zapier設定（freee・Gmail連携）: 60,000円</li>
+                <li>freee API設定・接続サポート: 30,000円</li>
+                <li>管理用スプレッドシート作成: 20,000円</li>
+                <li>エラーハンドリング設定: 15,000円</li>
+              </ul>
+              <div class="mt-4 pt-2 border-t">
+                <p class="font-semibold">合計: <span class="text-lg">125,000円</span></p>
+                <p class="text-green-600 font-semibold">顧問価格: 106,250円〜</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Synergy -->
+        <section class="section-card rounded-3xl p-8 sm:p-10 mb-12">
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.3em] text-purple-500">Synergy</p>
+              <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">他サービスとの相乗効果</h2>
+              <p class="mt-4 text-sm sm:text-base text-slate-600 leading-7">自動化で仕組みを作り、BPOで実務を回し、顧問で経営を伸ばす──一気通貫の支援が当社の強みです。</p>
+            </div>
+            <ul class="space-y-4 text-sm text-slate-600">
+              <li class="flex items-start gap-3"><span class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 font-semibold">1</span><span><span class="font-semibold">freee導入支援</span>と連携し、APIで手入力をほぼゼロに。</span></li>
+              <li class="flex items-start gap-3"><span class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 font-semibold">2</span><span><span class="font-semibold">記帳代行・BPO</span>で自動化した仕組みを日々運用し、月額コストを削減。</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Steps -->
+        <section class="rounded-3xl bg-white border border-slate-200 shadow-xl shadow-purple-100/70 p-8 sm:p-10 mb-12">
+          <div class="text-center mb-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-purple-500">Implementation</p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">導入ステップ</h2>
+            <p class="mt-4 text-sm sm:text-base text-slate-600">短期間でROIを可視化し、段階的に自動化領域を拡張します。</p>
+          </div>
+          <div class="space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-purple-50 border border-purple-100 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-purple-600 text-white font-bold text-lg">01</span>
+                <h3 class="text-lg font-semibold text-slate-900">As-Is診断</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">業務・ツール・データの現状とROI仮説を整理。</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-white border border-slate-200 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-purple-600 text-white font-bold text-lg">02</span>
+                <h3 class="text-lg font-semibold text-slate-900">PoC</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">小規模な自動化で効果と使い勝手を検証。</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-white border border-slate-200 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-purple-600 text-white font-bold text-lg">03</span>
+                <h3 class="text-lg font-semibold text-slate-900">本実装</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">ワークフロー、権限、監査ログ、監視体制まで構築。</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:gap-8 bg-white border border-slate-200 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-purple-600 text-white font-bold text-lg">04</span>
+                <h3 class="text-lg font-semibold text-slate-900">運用・改善</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-6">定期的なボトルネック除去と拡張で効果を持続。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="rounded-3xl bg-purple-600 text-white p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-purple-100">Next Step</p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-bold">無料ヒアリングでROI仮説を提示</h2>
+            <p class="mt-4 text-sm sm:text-base text-purple-100 leading-7">60分のヒアリングで対象業務と想定削減工数を可視化し、最適な導入ステップをご提案します。</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <a href="mailto:contact@yourcompany.com?subject=生成AI・自動化支援の相談について" class="inline-flex items-center gap-3 bg-white text-purple-600 font-semibold px-6 py-3 rounded-full shadow-lg shadow-purple-900/30 hover:bg-purple-50"><i data-lucide="clipboard-check" class="w-5 h-5"></i>ヒアリングを予約</a>
+            <a href="サービス概要と料金体系.html" class="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm"><i data-lucide="info" class="w-4 h-4"></i>他サービスも見る</a>
+          </div>
+        </section>
       </div>
-    </section>
-
-    <!-- Synergy -->
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">他サービスとの相乗効果</h2>
-      <ul class="list-disc pl-5 space-y-2 text-slate-700">
-        <li><span class="font-semibold">freee導入支援</span>: API連携等で手入力をほぼゼロへ。</li>
-        <li><span class="font-semibold">記帳代行・BPO</span>: 自動化によって利用時間を圧縮し、<span class="font-semibold">月額コストを削減</span>。</li>
-      </ul>
-      <p class="text-sm text-slate-500 mt-2">「自動化で仕組みを作り、BPOで実務を回し、顧問で経営を伸ばす」一気通貫の支援が私たちの強みです。</p>
-    </section>
-
-    <section class="section rounded-xl p-6 mb-8">
-      <h2 class="text-xl font-bold mb-4">導入ステップ</h2>
-      <ol class="list-decimal pl-5 space-y-2">
-        <li>As-Is把握（業務/ツール/データ）とROI仮説</li>
-        <li>PoC（小規模自動化）で効果検証</li>
-        <li>本実装（ワークフロー/権限/監査ログ/監視）</li>
-        <li>運用・改善（ボトルネック除去/拡張）</li>
-      </ol>
-    </section>
-
-    <section class="section rounded-xl p-6 text-center">
-      <a href="mailto:contact@yourcompany.com?subject=生成AI・自動化支援の相談について" class="inline-block bg-purple-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-purple-700">問い合わせる</a>
-    </section>
+    </main>
   </div>
   <script>lucide.createIcons();</script>
 </body>
