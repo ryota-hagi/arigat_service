@@ -1,41 +1,1599 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>サービス一覧 | ARIGAT</title>
-  <style>
-    :root { --bg:#0b0d10; --fg:#e8eef4; --muted:#a7b3be; --card:#11151a; --acc:#4cc9f0; }
-    html,body{ height:100%; }
-    body{ margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Noto Sans JP", sans-serif; background:var(--bg); color:var(--fg); }
-    header{ padding:32px 20px 10px; text-align:center; }
-    header h1{ margin:0; font-size:24px; font-weight:700; }
-    header p{ margin:6px 0 0; color:var(--muted); font-size:14px; }
-    main{ max-width:920px; margin:24px auto 48px; padding:0 16px; }
-    .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap:16px; }
-    .card{ background:var(--card); border:1px solid #1a2027; border-radius:10px; padding:16px; transition: transform .08s ease, border-color .12s ease; }
-    .card:hover{ transform: translateY(-1px); border-color: var(--acc); }
-    .card a{ color:var(--fg); text-decoration:none; display:block; }
-    .card small{ color:var(--muted); display:block; margin-top:6px; }
-    footer{ text-align:center; color:var(--muted); font-size:12px; padding:32px 0; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>株式会社ariGaT | 経営を、最強の武器へ。</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- freee_lpのスタイルシートを流用 -->
+  <link rel="stylesheet" href="../../freee_lp/src/style.css" />
 </head>
+
 <body>
-  <header>
-    <h1>サービス一覧</h1>
-    <p>商品・サービスのHTML資料を一覧化しました。各カードから閲覧できます。</p>
-  </header>
-  <main>
-    <section class="grid">
-      <article class="card"><a href="pages/サービス概要と料金体系.html"><strong>サービス概要と料金体系</strong><small>Overview & Pricing</small></a></article>
-      <article class="card"><a href="pages/補助金申請支援.html"><strong>補助金申請支援</strong><small>Grant Application Support</small></a></article>
-      <article class="card"><a href="pages/銀行融資支援.html"><strong>銀行融資支援</strong><small>Bank Loan Support</small></a></article>
-      <article class="card"><a href="pages/記帳代行・BPO.html"><strong>記帳代行・BPO</strong><small>Bookkeeping / BPO</small></a></article>
-      <article class="card"><a href="pages/経営顧問サービス.html"><strong>経営顧問サービス</strong><small>Management Advisory</small></a></article>
-      <article class="card"><a href="pages/freee導入支援.html"><strong>freee導入支援</strong><small>freee Implementation</small></a></article>
-      <article class="card"><a href="pages/生成AI・自動化支援.html"><strong>生成AI・自動化支援</strong><small>GenAI & Automation</small></a></article>
-    </section>
-  </main>
-  <footer>© ARIGAT</footer>
+  <div class="page" id="top">
+    <div class="hero-scene" aria-hidden="true">
+      <div id="hero-three" class="three-canvas"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <button class="logo" type="button" data-scroll="top">
+          <span class="logo-mark">aG</span>
+          <span class="logo-text">株式会社ariGaT</span>
+        </button>
+        <nav class="nav-links" aria-label="主要メニュー">
+          <button type="button" data-scroll="problems">経営課題</button>
+          <button type="button" data-scroll="solution">解決策</button>
+          <button type="button" data-scroll="overview">全体像</button>
+          <button type="button" data-scroll="services">サービス</button>
+          <button type="button" data-scroll="pricing">料金</button>
+          <button type="button" data-scroll="flow">導入の流れ</button>
+          <button type="button" data-scroll="faq">FAQ</button>
+        </nav>
+        <button class="btn btn-dark btn-small" type="button" data-scroll="contact">無料相談を予約</button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="メニューを開く" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="container">
+          <button type="button" data-scroll="problems">経営課題</button>
+          <button type="button" data-scroll="solution">解決策</button>
+          <button type="button" data-scroll="overview">全体像</button>
+          <button type="button" data-scroll="services">サービス</button>
+          <button type="button" data-scroll="pricing">料金</button>
+          <button type="button" data-scroll="flow">導入の流れ</button>
+          <button type="button" data-scroll="faq">FAQ</button>
+          <button class="btn btn-dark" type="button" data-scroll="contact">無料相談を予約</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-pill reveal" data-reveal="zoom">
+            <span class="pulse-dot"></span>
+            中小企業経営の「守り」と「攻め」を一体化
+          </div>
+          <h1 class="hero-title reveal" data-reveal="zoom" style="--delay:120ms">
+            <span class="hero-title-soft">なぜかお金が残らない経営から、</span>
+            <span class="hero-title-gradient">「計画的に利益を出す経営」</span>
+            <span class="hero-title-soft">へ。</span>
+          </h1>
+          <p class="hero-lead reveal" data-reveal="zoom" style="--delay:240ms">
+            私たちは、地方の中小企業が直面する複雑な経営課題を解決するプロフェッショナル集団です。<br>
+            「経営顧問（守り）」「補助金顧問（攻め）」「BPO（土台）」を三位一体で提供し、<br>
+            貴社の経営を「最強の武器」に変える仕組みを構築します。
+          </p>
+          <div class="hero-actions reveal" data-reveal="up" style="--delay:360ms">
+            <button class="btn btn-primary btn-shine" type="button" data-scroll="contact">
+              まずは無料で経営診断
+              <i data-lucide="arrow-right"></i>
+            </button>
+            <button class="btn btn-ghost" type="button" data-scroll="solution">私たちの解決策を見る</button>
+          </div>
+          <div class="hero-stats reveal" data-reveal="up" style="--delay:480ms">
+            <div>
+              <strong>守り</strong>
+              <p>経営・財務顧問</p>
+            </div>
+            <div>
+              <strong>攻め</strong>
+              <p>補助金・投資顧問</p>
+            </div>
+            <div>
+              <strong>土台</strong>
+              <p>BPO・DX支援</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="problems" class="section problems">
+        <div class="container">
+          <div class="section-title reveal" data-reveal="up">
+            <span class="section-kicker">YOUR PAINS</span>
+            <h2>こんな「静かなる危機」に<br>心当たりはありませんか？</h2>
+            <p>一つでも当てはまれば、それは危険信号。見えないところで会社の体力は削られています。</p>
+          </div>
+
+          <div class="target-panel is-active" style="margin-bottom: 0;">
+            <article class="problem-card reveal" data-reveal="up">
+              <div class="problem-icon danger">
+                <i data-lucide="trending-down"></i>
+              </div>
+              <h3>売上はあるのにお金が残らない</h3>
+              <p>どんぶり勘定で、どこに問題があるか不明。値上げや原価高への対策が常に後手に回ってしまう。</p>
+            </article>
+            <article class="problem-card reveal" data-reveal="up" style="--delay:120ms">
+              <div class="problem-icon danger">
+                <i data-lucide="landmark"></i>
+              </div>
+              <h3>銀行対応が苦手・不安</h3>
+              <p>融資担当者との会話が噛み合わない。試算表の提出が遅れ、必要な時に資金を借りられないリスクがある。</p>
+            </article>
+            <article class="problem-card reveal" data-reveal="up" style="--delay:240ms">
+              <div class="problem-icon danger">
+                <i data-lucide="file-x-2"></i>
+              </div>
+              <h3>補助金は面倒・怖い</h3>
+              <p>存在は知っているが、手続きが面倒で諦めている。「採択後が大変」と聞き、怖くて手を出せない。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution" class="section solution">
+        <div id="solution-three" class="three-canvas three-canvas--section" aria-hidden="true"></div>
+        <div class="container solution-inner">
+          <div class="solution-title reveal" data-reveal="zoom">
+            <span class="section-kicker light">OUR SOLUTION</span>
+            <h2>守り、攻め、土台。<br>三位一体で経営を「仕組み化」します。</h2>
+            <p>
+              私たちは、場当たり的な経営からの脱却を支援します。<br>
+              経営の根幹をなす3つの領域を連携させ、<br>
+              貴社が持続的に成長できる「経営システム」を構築・伴走します。
+            </p>
+          </div>
+          <div class="solution-steps">
+            <article class="solution-step reveal" data-reveal="up">
+              <span>守り / Defense</span>
+              <h3>経営・財務顧問</h3>
+              <p>資金繰り、銀行格付け、投資計画を設計・運用。「資金の失敗確率」を劇的に下げます。</p>
+            </article>
+            <article class="solution-step reveal" data-reveal="up" style="--delay:150ms">
+              <span>攻め / Offense</span>
+              <h3>補助金・投資顧問</h3>
+              <p>補助金を活用した計画的な投資サイクルを構築。「外部資金の獲得確率」を最大化します。</p>
+            </article>
+            <article class="solution-step reveal" data-reveal="up" style="--delay:300ms">
+              <span>土台 / Foundation</span>
+              <h3>BPO・DX支援</h3>
+              <p>証憑・数値・資料化の運用を整備。守りと攻めの両方を支える「経営の足腰」を強化します。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="section automation">
+        <div class="container">
+          <div class="section-title reveal" data-reveal="up">
+            <span class="section-kicker">SERVICE MAP</span>
+            <h2>3階建てで整理する、ariGaTのサービス全体像</h2>
+            <p>
+              1階は月額の基盤（顧問・BPO）、2階は案件実行のPJ、3階は独立提供も可能な周辺サービス。<br>
+              顧問を軸に設計し、必要なPJへ最短距離でつなぎます。
+            </p>
+          </div>
+          <div class="automation-grid">
+            <article class="automation-card reveal" data-reveal="up">
+              <h3>1階（基盤）: 守り×攻め×土台を月額で構築</h3>
+              <p>経営判断の速度と精度を上げ、資金・投資・補助金の“手遅れ”を減らす土台。</p>
+              <ul class="automation-list">
+                <li>経営顧問（守り）</li>
+                <li>補助金顧問（攻め / Lite含む）</li>
+                <li>BPO（証憑・数値・資料化）</li>
+              </ul>
+              <div class="tag-chips">
+                <span>月次（毎月の成績表）</span>
+                <span>資金の見通し</span>
+                <span>銀行に出せる資料の型</span>
+              </div>
+            </article>
+            <article class="automation-card reveal" data-reveal="up" style="--delay:120ms">
+              <h3>2階（PJ）: 案件単位で実行を加速</h3>
+              <p>基盤の上で、申請・調達・DXが通りやすくなるためのプロジェクト支援。</p>
+              <ul class="automation-list">
+                <li>補助金申請支援（顧問セット・BPOセット・スポット）</li>
+                <li>融資支援</li>
+                <li>freee導入支援</li>
+                <li>AI・自動化支援</li>
+              </ul>
+              <div class="tag-chips">
+                <span>採択後の実績報告まで伴走</span>
+                <span>顧問加入で優遇</span>
+                <span>体制整備が前提</span>
+              </div>
+            </article>
+            <article class="automation-card reveal" data-reveal="up" style="--delay:240ms">
+              <h3>3階（その他）: 独立提供も可能</h3>
+              <p>基盤とは独立して提供できる、周辺サービス群。</p>
+              <ul class="automation-list">
+                <li>固定資産税評価額点検／過払い還付請求代行</li>
+                <li>ミエピタ広告（集客チャネル）</li>
+              </ul>
+              <div class="tag-chips">
+                <span>成功報酬型</span>
+                <span>広告枠</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-title reveal" data-reveal="up" style="margin-top: 56px;">
+            <span class="section-kicker">PROPOSAL ORDER</span>
+            <h2>顧問を軸にした提案順序</h2>
+            <p>顧問 → BPO → PJ → 顧問なしの順で、無理なく最適化します。</p>
+          </div>
+          <div class="flow-step-grid">
+            <div class="flow-step-item reveal" data-reveal="up">
+              <span>01</span>
+              <div>
+                <h4>全体像と顧問メリットの共有</h4>
+                <p>守り×攻め×土台の全体像と、顧問加入の具体メリットを提示します。</p>
+              </div>
+            </div>
+            <div class="flow-step-item reveal" data-reveal="up" style="--delay:100ms">
+              <span>02</span>
+              <div>
+                <h4>顧問（守り/攻め）の概要・料金</h4>
+                <p>役割・アウトプット・料金を明確化し、継続伴走の価値を伝えます。</p>
+              </div>
+            </div>
+            <div class="flow-step-item reveal" data-reveal="up" style="--delay:200ms">
+              <span>03</span>
+              <div>
+                <h4>土台（BPO）の補完価値</h4>
+                <p>証憑・数値・資料化を整え、顧問成果を支える役割を共有します。</p>
+              </div>
+            </div>
+            <div class="flow-step-item reveal" data-reveal="up" style="--delay:300ms">
+              <span>04</span>
+              <div>
+                <h4>2階PJの実行支援</h4>
+                <p>補助金申請・融資・導入・自動化を「顧問加入が合理的」な設計で提示します。</p>
+              </div>
+            </div>
+            <div class="flow-step-item reveal" data-reveal="up" style="--delay:400ms">
+              <span>05</span>
+              <div>
+                <h4>顧問なし選択肢</h4>
+                <p>BPOのみ、Lite、スポットなど、顧問不要層向けの後段メニューを提示します。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section features" style="background: #fff; color: var(--slate-900);">
+        <div class="container">
+          <div class="section-title reveal" data-reveal="up" style="color: var(--slate-900);">
+            <span class="section-kicker gold">CORE SERVICES</span>
+            <h2 style="color: var(--slate-900);">1階（基盤）を支える3つのコアサービス</h2>
+            <p style="color: var(--slate-600);">
+              顧問（守り/攻め）とBPOを組み合わせ、月次（毎月の成績表）と資金の見通しを運用します。
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal" data-reveal="up" data-tilt style="background: var(--slate-50); border-color: var(--slate-100);">
+              <div class="feature-icon gradient-blue">
+                <i data-lucide="shield-check"></i>
+              </div>
+              <h3 style="color: var(--slate-900);">経営顧問（守り）</h3>
+              <p style="color: var(--slate-600);">
+                資金繰り・銀行格付・投資計画を「計画で回す」月額顧問。意思決定の根拠を作り、銀行対応の摩擦を減らします。
+              </p>
+              <ul class="service-list">
+                <li><strong>主なアウトプット:</strong> 年次資金/投資計画、月次サマリー、融資/補助金カレンダー</li>
+                <li><strong>運用:</strong> 月1回の定例（90分）＋KPIレビュー</li>
+                <li><strong>連携:</strong> 融資支援・補助金申請支援（顧問セット）・BPO</li>
+              </ul>
+            </article>
+            <article class="feature-card reveal" data-reveal="up" data-tilt style="--delay:150ms; background: var(--slate-50); border-color: var(--slate-100);">
+              <div class="feature-icon gradient-gold">
+                <i data-lucide="rocket"></i>
+              </div>
+              <h3 style="color: var(--slate-900);">補助金顧問（攻め）</h3>
+              <p style="color: var(--slate-600);">
+                補助金を“毎回の運”にしない年次運用。Lite（入口）と本格顧問で、採択後の実績報告まで見据えます。
+              </p>
+              <ul class="service-list">
+                <li><strong>主なアウトプット:</strong> 年間ロードマップ、加点項目取得支援、申請前準備</li>
+                <li><strong>特長:</strong> 最低支援額なし・実績報告費用無料（本格顧問）</li>
+                <li><strong>連携:</strong> 申請支援（顧問セット・BPOセット・スポット）、BPOで証憑・集計を前倒し</li>
+              </ul>
+            </article>
+            <article class="feature-card reveal" data-reveal="up" data-tilt style="--delay:300ms; background: var(--slate-50); border-color: var(--slate-100);">
+              <div class="feature-icon gradient-green">
+                <i data-lucide="database"></i>
+              </div>
+              <h3 style="color: var(--slate-900);">BPOサービス（土台）</h3>
+              <p style="color: var(--slate-600);">
+                証憑・数値・資料化を整え、守り/攻めの両方を支える土台に。月次を前倒し運用し、判断材料を早くそろえます。
+              </p>
+              <ul class="service-list">
+                <li><strong>主なアウトプット:</strong> 月次試算表、資金繰り、社長サマリー、銀行提出パック</li>
+                <li><strong>標準運用:</strong> 翌月5営業日以内を目安に月次確定</li>
+                <li><strong>連携:</strong> freee導入/AI自動化で作業時間を圧縮</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section plans">
+        <div class="container">
+          <div class="section-title reveal" data-reveal="up">
+            <span class="section-kicker">PRICING</span>
+            <h2>料金の全体像（守り・攻め・土台）</h2>
+            <p>
+              まずは1階（基盤）から設計し、必要に応じて2階PJを組み合わせます。<br>
+              サービスと年商を選ぶと、最適な料金だけが表示されます。<br>
+              表示価格は税別の目安です。詳細は診断後にお見積します。
+            </p>
+          </div>
+
+          <div class="pricing-actions reveal" data-reveal="up" style="--delay:120ms">
+            <a class="btn btn-ghost btn-accent" href="pages/サービス概要と料金体系.html">
+              全体説明を見る
+              <i data-lucide="external-link"></i>
+            </a>
+          </div>
+
+          <div class="pricing-selector" data-pricing-selector>
+            <div class="selector-group">
+              <h3>受けたいサービス</h3>
+              <div class="selector-options">
+                <label class="selector-option">
+                  <input type="radio" name="pricing-service" value="defense" checked>
+                  <span class="option-card">
+                    <span class="option-title">守り（経営顧問）</span>
+                    <span class="option-note">資金・銀行対応を計画で回す</span>
+                  </span>
+                </label>
+                <label class="selector-option">
+                  <input type="radio" name="pricing-service" value="offense">
+                  <span class="option-card">
+                    <span class="option-title">攻め（補助金顧問）</span>
+                    <span class="option-note">補助金を年次で取りに行く</span>
+                  </span>
+                </label>
+                <label class="selector-option">
+                  <input type="radio" name="pricing-service" value="foundation">
+                  <span class="option-card">
+                    <span class="option-title">土台（BPO）</span>
+                    <span class="option-note">月次データを前倒しで整える</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="selector-group">
+              <h3>自社の年商</h3>
+              <div class="selector-select">
+                <select data-pricing-sales>
+                  <option value="under_50m">5,000万円以下</option>
+                  <option value="50m_100m" selected>5,000万円〜1億円</option>
+                  <option value="100m_500m">〜5億円</option>
+                  <option value="500m_1b">〜10億円</option>
+                  <option value="1b_3b">〜30億円</option>
+                </select>
+                <p class="select-note" data-pricing-sales-note>年商は目安のレンジを選択してください。</p>
+              </div>
+              <div class="selector-hours" data-pricing-hours hidden>
+                <label>
+                  <span>月あたりの作業時間（h）</span>
+                  <input type="number" min="1" step="0.5" value="5" data-pricing-hours-input>
+                </label>
+                <p class="select-note">BPOは時間課金です。例: 5h, 10h, 20h</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-result reveal" data-reveal="up" style="--delay:180ms">
+            <article class="pricing-result-card" data-pricing-card>
+              <div class="result-header">
+                <div class="result-title">
+                  <span class="pricing-tag defense" data-pricing-tag>守り</span>
+                  <h3 data-pricing-name>経営顧問</h3>
+                </div>
+                <div class="result-price">
+                  <strong data-pricing-price>5万円</strong>
+                  <span data-pricing-unit>/月</span>
+                </div>
+              </div>
+              <p class="result-desc" data-pricing-desc>資金繰り・銀行格付・投資計画を年次で設計し、月次で運用する顧問です。</p>
+              <ul class="result-points" data-pricing-points>
+                <li>年次資金/投資計画を設計</li>
+                <li>融資・補助金ロードマップ運用</li>
+                <li>銀行格付KPIのモニタリング</li>
+              </ul>
+              <div class="lite-toggle" data-pricing-lite-toggle hidden>
+                <label class="lite-check">
+                  <input type="checkbox" data-pricing-lite-checkbox>
+                  <span>補助金顧問Liteの内容も見る</span>
+                </label>
+              </div>
+              <div class="lite-panel" data-pricing-lite hidden>
+                <h4>補助金顧問Lite（入口）</h4>
+                <p>月額 8,000円で、補助金情報と事前準備の伴走を受けられます。</p>
+                <ul>
+                  <li>補助金情報の定期配信</li>
+                  <li>相談チャットルーム</li>
+                  <li>公募前の準備サポート</li>
+                  <li>案件化で顧問セット/BPOセットへ移行</li>
+                </ul>
+              </div>
+              <div class="result-breakdown" data-pricing-breakdown hidden>
+                <div class="breakdown-item">
+                  <span class="breakdown-label">通常料金</span>
+                  <div class="breakdown-value">
+                    <strong data-pricing-regular>--</strong>
+                    <span class="breakdown-unit">/月</span>
+                  </div>
+                  <p data-pricing-regular-note>4,000円/時 × 5h</p>
+                </div>
+                <div class="breakdown-item highlight">
+                  <span class="breakdown-label">顧問加入時</span>
+                  <div class="breakdown-value">
+                    <strong data-pricing-discount>--</strong>
+                    <span class="breakdown-unit">/月</span>
+                  </div>
+                  <p data-pricing-discount-note>3,200円/時 × 5h</p>
+                </div>
+              </div>
+              <div class="result-foot">
+                <p class="result-note" data-pricing-note>年商5,000万円〜1億円の料金目安です。</p>
+                <button class="btn btn-accent" type="button" data-lightbox-trigger="subsidy-sim" data-pricing-sim hidden>補助金申請シミュレーション</button>
+              </div>
+            </article>
+          </div>
+
+          <p class="pricing-footnote">
+            顧問加入企業は2階PJ見積から10〜20%目安の優遇・優先アサイン（案件状況で変動）。
+          </p>
+        </div>
+      </section>
+
+      <section id="layer2" class="section automation">
+        <div class="container">
+          <div class="section-title reveal" data-reveal="up">
+            <span class="section-kicker">LAYER 2</span>
+            <h2>2階（PJ）サービス</h2>
+            <p>
+              1階（基盤）の上で、案件単位の実行を支援します。<br>
+              補助金以外の各サービスは、詳細ページで具体内容をご確認ください。
+            </p>
+          </div>
+          <div class="automation-grid service-grid">
+            <article class="automation-card reveal" data-reveal="up">
+              <h3>補助金申請支援</h3>
+              <p>申請の計画策定から採択後の実績報告まで、案件として実行支援します。</p>
+              <ul class="automation-list">
+                <li>顧問セット / BPOセット / スポットに対応</li>
+                <li>採択後の実績報告まで伴走</li>
+                <li>体制整備と証憑運用を重視</li>
+              </ul>
+              <p class="service-note">補助金関連はシミュレーションから詳細を確認できます。</p>
+            </article>
+            <article class="automation-card reveal" data-reveal="up" style="--delay:120ms">
+              <h3>銀行融資支援</h3>
+              <p>融資実行までの資料設計と銀行対応を伴走し、条件交渉を支援します。</p>
+              <ul class="automation-list">
+                <li>融資戦略の設計</li>
+                <li>資料作成と面談準備</li>
+                <li>顧問先優遇条件あり</li>
+              </ul>
+              <div class="service-actions">
+                <a class="btn btn-dark btn-small" href="./pages/銀行融資支援.html">詳細ページを見る</a>
+              </div>
+            </article>
+            <article class="automation-card reveal" data-reveal="up" style="--delay:240ms">
+              <h3>freee導入支援</h3>
+              <p>導入・設定・運用設計までを支援し、BPO時間を圧縮します。</p>
+              <ul class="automation-list">
+                <li>初期設定とデータ移行</li>
+                <li>運用ルールの設計</li>
+                <li>担当者トレーニング</li>
+              </ul>
+              <div class="service-actions">
+                <a class="btn btn-dark btn-small" href="./pages/freee導入支援.html">詳細ページを見る</a>
+              </div>
+            </article>
+            <article class="automation-card reveal" data-reveal="up" style="--delay:360ms">
+              <h3>生成AI・自動化支援</h3>
+              <p>反復業務を自動化し、作業時間の削減と業務品質の安定化を図ります。</p>
+              <ul class="automation-list">
+                <li>業務プロセス診断</li>
+                <li>AI/自動化の設計・実装</li>
+                <li>freee連携で効果最大化</li>
+              </ul>
+              <div class="service-actions">
+                <a class="btn btn-dark btn-small" href="./pages/生成AI・自動化支援.html">詳細ページを見る</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="flow" class="section plans">
+        <div class="container">
+          <div class="section-title reveal" data-reveal="up">
+            <h2>導入の流れ</h2>
+            <p>
+              わずか4ステップで、貴社の経営は新たなステージへ。
+            </p>
+          </div>
+          
+          <div class="automation-grid">
+            <div class="flow-step-grid">
+              <div class="flow-step-item reveal" data-reveal="up">
+                <span>01</span>
+                <div>
+                  <h4>無料経営診断・課題整理</h4>
+                  <p>現状の財務状況や業務フローをヒアリングし、どこに「静かな危機」が潜んでいるかを可視化します。</p>
+                </div>
+              </div>
+              <div class="flow-step-item reveal" data-reveal="up" style="--delay:100ms">
+                <span>02</span>
+                <div>
+                  <h4>経営システム設計・ご提案</h4>
+                  <p>貴社に最適な「守り・攻め・土台」の組み合わせを設計し、具体的な導入プランと見積をご提案します。</p>
+                </div>
+              </div>
+              <div class="flow-step-item reveal" data-reveal="up" style="--delay:200ms">
+                <span>03</span>
+                <div>
+                  <h4>導入・実行支援</h4>
+                  <p>計画に基づき、freee導入、業務フロー改善、補助金申請などを実行。担当者へのトレーニングも行います。</p>
+                </div>
+              </div>
+              <div class="flow-step-item reveal" data-reveal="up" style="--delay:300ms">
+                <span>04</span>
+                <div>
+                  <h4>月次伴走・改善</h4>
+                  <p>月次レポートを元に定例会議を実施。計画との差異を確認し、次の打ち手を共に考え、改善し続けます。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="container">
+          <div class="section-title reveal" data-reveal="up">
+            <h2>よくあるご質問</h2>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item reveal" data-reveal="up">
+              <button class="accordion-trigger" type="button" data-accordion-trigger>
+                <span>顧問税理士がいますが、契約できますか？</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <div class="accordion-panel" data-accordion-panel>
+                <p>はい、全く問題ありません。私たちは税務申告そのものではなく、未来の経営判断とアクションのための「経営財務」を支援します。顧問税理士の先生と役割分担し、連携しながらサポートすることも可能です。</p>
+              </div>
+            </div>
+            <div class="accordion-item reveal" data-reveal="up" style="--delay:120ms">
+              <button class="accordion-trigger" type="button" data-accordion-trigger>
+                <span>地方の中小企業ですが、対応可能ですか？</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <div class="accordion-panel" data-accordion-panel>
+                <p>はい、もちろんです。私たちは地方の中小企業に特化しており、オンラインでのサポート体制も万全です。三重県内のお客様には直接訪問も可能です。</p>
+              </div>
+            </div>
+            <div class="accordion-item reveal" data-reveal="up" style="--delay:240ms">
+              <button class="accordion-trigger" type="button" data-accordion-trigger>
+                <span>補助金や融資の成功を保証してくれますか？</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <div class="accordion-panel" data-accordion-panel>
+                <p>採択や融資実行を100%保証することはできません。しかし、私たちの支援は、その「成功確率」を極限まで高めるためのものです。特に、採択後の煩雑な手続きで失敗しないための「土台」作りを重視しています。</p>
+              </div>
+            </div>
+             <div class="accordion-item reveal" data-reveal="up" style="--delay:360ms">
+              <button class="accordion-trigger" type="button" data-accordion-trigger>
+                <span>まずは相談だけしてみたいのですが…</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <div class="accordion-panel" data-accordion-panel>
+                <p>大歓迎です。初回のご相談・経営診断は無料です。無理な営業は一切いたしませんので、まずはお気軽に貴社の課題をお聞かせください。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="contact-glow" aria-hidden="true"></div>
+        <div class="container">
+          <div class="contact-title reveal" data-reveal="up">
+            <span class="section-kicker light">CONTACT</span>
+            <h2>未来を変える、第一歩を。</h2>
+            <p>
+              貴社の課題を一緒に整理し、最短の解決策をご提案します。<br>
+              まずは<span>無料経営診断</span>へお申し込みください。
+            </p>
+          </div>
+          <div class="contact-card reveal" data-reveal="up" style="--delay:120ms">
+            <form class="contact-form" data-contact-form>
+              <div class="field-row">
+                <label>
+                  <span>会社名</span>
+                  <input type="text" placeholder="株式会社〇〇">
+                </label>
+                <label>
+                  <span>お名前 <em>*</em></span>
+                  <input type="text" placeholder="山田 太郎" required>
+                </label>
+              </div>
+              <div class="field-row">
+                <label>
+                  <span>メールアドレス <em>*</em></span>
+                  <input type="email" placeholder="yamada@example.com" required>
+                </label>
+                <label>
+                  <span>電話番号</span>
+                  <input type="tel" placeholder="090-1234-5678">
+                </label>
+              </div>
+              <label>
+                <span>ご相談内容（簡単で結構です）</span>
+                <textarea placeholder="例：銀行融資と補助金について相談したい。まずは話を聞いてみたい。"></textarea>
+              </label>
+              <button class="btn btn-primary btn-shine" type="submit">無料で経営診断を申し込む</button>
+              <p class="contact-note">※ お送りいただいた情報は、ご相談への返信目的以外には一切使用いたしません。</p>
+            </form>
+            <div class="contact-success" data-contact-success>
+              <div class="success-icon"><i data-lucide="check"></i></div>
+              <h3>お問い合わせありがとうございます</h3>
+              <p>担当者より、通常1営業日以内にご連絡させていただきます。</p>
+              <button class="btn btn-ghost" type="button" data-contact-reset>フォームに戻る</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="logo-mark small">aG</span>
+          <span>株式会社ariGaT</span>
+        </div>
+        <div class="footer-links">
+          <a href="#">会社概要</a>
+          <a href="#">プライバシーポリシー</a>
+        </div>
+        <p>&copy; 2026 株式会社ariGaT. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="lightbox pricing-modal" data-lightbox="pricing" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-content pricing-modal__content" role="dialog" aria-modal="true" aria-label="料金の全体像">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる">×</button>
+      <div class="pricing-modal__header">
+        <span class="section-kicker gold">PRICING DETAIL</span>
+        <h3>料金の全体像</h3>
+        <p>守り・攻め・土台の詳細説明と料金表（税別）の一覧です。</p>
+      </div>
+      <div class="pricing-modal__grid">
+        <article class="pricing-modal-card">
+          <span class="pricing-tag defense">守り</span>
+          <h4>経営顧問</h4>
+          <p>資金・銀行対応を「計画で回す」ための月額顧問。</p>
+          <div class="price-table">
+            <div class="price-row">
+              <span class="price-tier">年商5,000万円〜1億円</span>
+              <span class="price-value">5万円/月</span>
+            </div>
+            <div class="price-row">
+              <span class="price-tier">〜5億円</span>
+              <span class="price-value">10万円/月</span>
+            </div>
+            <div class="price-row">
+              <span class="price-tier">〜10億円</span>
+              <span class="price-value">15万円/月</span>
+            </div>
+            <div class="price-row">
+              <span class="price-tier">〜30億円</span>
+              <span class="price-value">20万円/月</span>
+            </div>
+          </div>
+          <ul class="modal-list">
+            <li>年次資金/投資計画（12ヶ月ローリング）</li>
+            <li>融資・補助金ロードマップ運用</li>
+            <li>銀行格付KPIのモニタリング</li>
+          </ul>
+        </article>
+        <article class="pricing-modal-card">
+          <span class="pricing-tag offense">攻め</span>
+          <h4>補助金顧問</h4>
+          <p>補助金を毎回の“運”にしない年次運用。</p>
+          <div class="modal-split">
+            <div>
+              <h5>Lite（入口）</h5>
+              <p class="modal-price">月額 8,000円</p>
+              <ul class="modal-list">
+                <li>補助金情報の定期配信</li>
+                <li>相談チャットルーム</li>
+                <li>公募前の準備サポート</li>
+              </ul>
+            </div>
+            <div>
+              <h5>本格（年次運用）</h5>
+              <p class="modal-price">月額 3万円〜</p>
+              <ul class="modal-list">
+                <li>年商5億円以下: 3万円/月</li>
+                <li>年商5億円超: 5万円/月</li>
+                <li>最低支援額の撤廃</li>
+                <li>実績報告費用は無料</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="modal-list">
+            <li>補助金申請支援（顧問セット・BPOセット・スポット）へ接続</li>
+            <li>BPOで証憑・集計を前倒し</li>
+            <li>採択後の運用設計まで支援</li>
+          </ul>
+        </article>
+        <article class="pricing-modal-card">
+          <span class="pricing-tag foundation">土台</span>
+          <h4>BPOサービス</h4>
+          <p>証憑・数値・資料化を整え、守りと攻めの両方を支える土台。</p>
+          <div class="modal-split">
+            <div>
+              <h5>通常（税別）</h5>
+              <p class="modal-price">4,000円/時</p>
+              <div class="price-table">
+                <div class="price-row">
+                  <span class="price-tier">ミニマム 5h</span>
+                  <span class="price-value">2万円/月</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-tier">スタンダード 10h</span>
+                  <span class="price-value">4万円/月</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-tier">プレミアム 20h</span>
+                  <span class="price-value">8万円/月</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h5>顧問加入時</h5>
+              <p class="modal-price">3,200円/時</p>
+              <div class="price-table">
+                <div class="price-row">
+                  <span class="price-tier">ミニマム 5h</span>
+                  <span class="price-value">1.6万円/月</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-tier">スタンダード 10h</span>
+                  <span class="price-value">3.2万円/月</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-tier">プレミアム 20h</span>
+                  <span class="price-value">6.4万円/月</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="modal-list">
+            <li>月次試算表・資金繰り・社長サマリー</li>
+            <li>銀行提出パックの整備</li>
+            <li>freee導入/自動化で作業時間を圧縮</li>
+          </ul>
+        </article>
+      </div>
+      <div class="pricing-modal__footer">
+        <button class="btn btn-primary btn-shine" type="button" data-scroll="contact" data-lightbox-close>無料で経営診断</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox pricing-modal" data-lightbox="subsidy-sim" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-content pricing-modal__content" role="dialog" aria-modal="true" aria-label="補助金申請シミュレーション">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる">×</button>
+      <div class="pricing-modal__header">
+        <span class="section-kicker gold">SUBSIDY SIM</span>
+        <h3>補助金申請シミュレーション</h3>
+        <p>補助金顧問に加入したうえで、2階（補助金申請支援）を依頼する場合の試算です。</p>
+      </div>
+      <div class="sim-grid">
+        <form class="sim-panel sim-form" data-subsidy-sim>
+          <div class="sim-field">
+            <label>申請プラン</label>
+            <div class="sim-options">
+              <label class="sim-option">
+                <input type="radio" name="sim-plan" value="A" checked>
+                <span class="sim-option-text">顧問セット</span>
+              </label>
+              <label class="sim-option">
+                <input type="radio" name="sim-plan" value="B">
+                <span class="sim-option-text">BPOセット</span>
+              </label>
+              <label class="sim-option">
+                <input type="radio" name="sim-plan" value="L">
+                <span class="sim-option-text">補助金顧問Lite</span>
+              </label>
+              <label class="sim-option">
+                <input type="radio" name="sim-plan" value="S">
+                <span class="sim-option-text">スポット</span>
+              </label>
+            </div>
+          </div>
+          <div class="sim-field">
+            <label>補助金申請額（円）</label>
+            <input type="number" min="0" step="10000" value="10000000" data-sim-amount>
+            <p class="sim-help">例: 10,000,000</p>
+          </div>
+          <div class="sim-field">
+            <label>成功報酬率</label>
+            <select data-sim-rate></select>
+          </div>
+        </form>
+        <div class="sim-panel sim-result">
+          <div class="sim-summary">
+            <div class="sim-row">
+              <span>着手金</span>
+              <strong data-sim-upfront>0円</strong>
+            </div>
+            <div class="sim-row">
+              <span>成功報酬</span>
+              <strong data-sim-fee>0円</strong>
+            </div>
+            <div class="sim-row total">
+              <span>合計（採択時）</span>
+              <strong data-sim-total>0円</strong>
+            </div>
+          </div>
+          <div class="sim-compare" data-sim-compare>
+            <h4>スポットとの差</h4>
+            <div class="compare-row">
+              <span data-sim-spot-label>スポット合計（20%）</span>
+              <strong data-sim-spot>0円</strong>
+            </div>
+            <div class="compare-row highlight">
+              <span>差額</span>
+              <strong data-sim-diff>+0円</strong>
+            </div>
+            <p class="compare-note">差額 = スポット合計 − 選択プラン合計（プラスはスポットが高い）</p>
+          </div>
+          <div class="sim-meta">
+            <p data-sim-note>採択額 × 成功報酬率で算出しています。</p>
+            <ul class="sim-details" data-sim-details></ul>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-modal__footer">
+        <a class="btn btn-primary btn-shine" href="https://docs.google.com/spreadsheets/d/1_uYdP1F7qKe-nTouj3TIrYN6S5qMyxTOBIDUmFQ3voE/edit?usp=sharing" target="_blank" rel="noopener noreferrer">詳細なシミュレーションはこちら</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" data-lightbox="diagram" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-content" role="dialog" aria-modal="true" aria-label="図解の拡大表示">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="拡大表示を閉じる">×</button>
+      <img src="./freee_lp/assets/receiptflow.png" alt="レシート自動処理フローの図解（拡大表示）">
+    </div>
+  </div>
+  
+  <style>
+    .flow-step-grid {
+      display: grid;
+      gap: 24px;
+    }
+    .flow-step-item {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      background: #fff;
+      padding: 24px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+    }
+    .flow-step-item span {
+      font-family: "Sora", sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--blue-500);
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: #dbeafe;
+      border-radius: 16px;
+    }
+    .flow-step-item h4 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+    .flow-step-item p {
+      color: var(--slate-600);
+    }
+    .service-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+      color: var(--slate-600);
+      font-weight: 600;
+    }
+    .service-list strong {
+      color: var(--slate-900);
+    }
+    .service-grid {
+      margin-top: 20px;
+    }
+    .service-actions {
+      margin-top: 16px;
+    }
+    .service-actions .btn {
+      border-radius: 14px;
+    }
+    .service-note {
+      margin-top: 12px;
+      color: var(--slate-600);
+      font-weight: 600;
+    }
+    .pricing-overview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin: 32px 0 36px;
+    }
+    .pricing-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 24px;
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.06);
+    }
+    .pricing-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.3rem;
+    }
+    .pricing-card p {
+      color: var(--slate-600);
+      font-weight: 600;
+    }
+    .pricing-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      background: var(--slate-100);
+      color: var(--slate-600);
+    }
+    .pricing-tag.defense {
+      background: #dbeafe;
+      color: var(--blue-700);
+    }
+    .pricing-tag.offense {
+      background: #fef3c7;
+      color: #b45309;
+    }
+    .pricing-tag.foundation {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .pricing-card__price {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin: 12px 0 6px;
+    }
+    .pricing-card__price strong {
+      font-size: 1.6rem;
+    }
+    .pricing-card__price span {
+      color: var(--slate-500);
+      font-weight: 700;
+    }
+    .pricing-card__note {
+      color: var(--slate-500);
+      font-size: 0.9rem;
+    }
+    .plan-glance {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+    .glance-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 18px;
+      padding: 16px 18px;
+    }
+    .glance-label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--slate-500);
+      font-weight: 800;
+    }
+    .glance-card strong {
+      display: block;
+      font-size: 1.1rem;
+      margin: 6px 0;
+      color: var(--slate-900);
+    }
+    .glance-card p {
+      color: var(--slate-500);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .price-table {
+      display: grid;
+      gap: 10px;
+    }
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid var(--slate-100);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
+    }
+    .price-tier {
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+    .price-value {
+      font-weight: 800;
+      color: var(--slate-900);
+    }
+    .plan-split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 8px;
+    }
+    .split-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 18px;
+      padding: 20px;
+    }
+    .split-card h4 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .split-price {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--slate-900);
+    }
+    .split-card ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      font-weight: 600;
+      color: var(--slate-600);
+    }
+    .pricing-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin: 16px 0 8px;
+    }
+    .btn-accent {
+      background: linear-gradient(135deg, var(--blue-600), #4f46e5);
+      color: #fff;
+      border: none;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.3);
+    }
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(37, 99, 235, 0.38);
+    }
+    .pricing-selector {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+      gap: 24px;
+      margin: 32px 0 20px;
+    }
+    .selector-group {
+      background: #fff;
+      border: 1px solid var(--slate-200);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+    }
+    .selector-group h3 {
+      margin-bottom: 16px;
+      font-size: 1.15rem;
+    }
+    .selector-options {
+      display: grid;
+      gap: 12px;
+    }
+    .selector-option {
+      position: relative;
+      cursor: pointer;
+    }
+    .selector-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .option-card {
+      display: grid;
+      gap: 6px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      border: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
+    }
+    .selector-option input:checked + .option-card {
+      border-color: var(--blue-600);
+      background: #eff6ff;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+      transform: translateY(-2px);
+    }
+    .option-title {
+      font-weight: 800;
+      color: var(--slate-900);
+    }
+    .option-note {
+      font-size: 0.9rem;
+      color: var(--slate-600);
+      font-weight: 600;
+    }
+    .selector-select select {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--slate-200);
+      background: #fff;
+      font-weight: 700;
+      color: var(--slate-800);
+    }
+    .selector-hours {
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+    }
+    .selector-hours label span {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+    .selector-hours input {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--slate-200);
+      background: #fff;
+      font-weight: 700;
+      color: var(--slate-800);
+    }
+    .select-note {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--slate-500);
+      font-weight: 600;
+    }
+    .pricing-result {
+      margin-top: 12px;
+    }
+    .pricing-result-card {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow-strong);
+      display: grid;
+      gap: 18px;
+    }
+    .result-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .result-title {
+      display: grid;
+      gap: 8px;
+    }
+    .result-title h3 {
+      font-size: 1.6rem;
+    }
+    .result-price {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+    .result-price span {
+      font-size: 1rem;
+      color: #cbd5e1;
+      font-weight: 700;
+    }
+    .result-desc {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+    .result-points {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+    .result-points li::before {
+      content: "✔";
+      color: #38bdf8;
+      margin-right: 8px;
+    }
+    .lite-toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .lite-check {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      color: #e2e8f0;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .lite-check input {
+      accent-color: #38bdf8;
+      width: 16px;
+      height: 16px;
+    }
+    .lite-panel {
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      background: rgba(30, 64, 175, 0.2);
+      display: grid;
+      gap: 10px;
+    }
+    .lite-panel[hidden],
+    .lite-toggle[hidden] {
+      display: none !important;
+    }
+    .lite-panel h4 {
+      font-size: 1.1rem;
+    }
+    .lite-panel p {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+    .lite-panel ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+    .lite-panel ul li::before {
+      content: "•";
+      color: #38bdf8;
+      margin-right: 8px;
+    }
+    .result-foot {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .result-breakdown {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(226, 232, 240, 0.15);
+      background: rgba(15, 23, 42, 0.35);
+    }
+    .breakdown-item {
+      display: grid;
+      gap: 6px;
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
+    .breakdown-item.highlight {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(30, 64, 175, 0.25);
+    }
+    .breakdown-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #cbd5e1;
+      font-weight: 800;
+    }
+    .breakdown-value {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .breakdown-value strong {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .breakdown-unit {
+      color: #cbd5e1;
+      font-weight: 700;
+    }
+    .breakdown-item p {
+      color: #cbd5e1;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .result-note {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      font-weight: 600;
+      max-width: 520px;
+    }
+    .pricing-footnote {
+      margin-top: 16px;
+      color: var(--slate-500);
+      font-weight: 600;
+      text-align: right;
+    }
+    .pricing-modal .pricing-modal__content {
+      background: #fff;
+      color: var(--slate-900);
+      max-width: min(1100px, 92vw);
+      padding: 32px;
+      align-items: stretch;
+      justify-items: stretch;
+      overflow: auto;
+    }
+    .pricing-modal .lightbox-close {
+      background: var(--slate-100);
+      color: var(--slate-900);
+    }
+    .pricing-modal__header h3 {
+      font-size: 1.8rem;
+      margin: 8px 0;
+    }
+    .pricing-modal__header p {
+      color: var(--slate-600);
+      font-weight: 600;
+    }
+    .pricing-modal__grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .pricing-modal-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 24px;
+      padding: 24px;
+      display: grid;
+      gap: 16px;
+    }
+    .pricing-modal-card h4 {
+      font-size: 1.4rem;
+    }
+    .modal-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      color: var(--slate-600);
+      font-weight: 600;
+    }
+    .modal-list li::before {
+      content: "•";
+      color: var(--blue-600);
+      margin-right: 8px;
+    }
+    .modal-split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .modal-split h5 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .modal-price {
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--slate-900);
+    }
+    .pricing-modal__footer {
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .sim-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .sim-panel {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 20px;
+      padding: 20px;
+      display: grid;
+      gap: 16px;
+    }
+    .sim-form > label {
+      font-weight: 700;
+      color: var(--slate-700);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .sim-options {
+      display: grid;
+      gap: 6px;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+    .sim-option {
+      display: grid;
+      grid-template-columns: 14px auto;
+      align-items: center;
+      column-gap: 4px;
+      justify-items: start;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .sim-option input {
+      margin: 0;
+      width: 14px;
+      height: 14px;
+      accent-color: var(--blue-600);
+      justify-self: start;
+    }
+    .sim-option-text {
+      line-height: 1.2;
+      justify-self: start;
+    }
+    .sim-form input,
+    .sim-form select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--slate-200);
+      font-weight: 700;
+      color: var(--slate-800);
+      background: #fff;
+    }
+    .sim-help {
+      margin-top: 6px;
+      color: var(--slate-500);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .sim-summary {
+      display: grid;
+      gap: 12px;
+    }
+    .sim-compare {
+      display: grid;
+      gap: 10px;
+      padding: 16px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid var(--slate-200);
+    }
+    .sim-compare[hidden] {
+      display: none !important;
+    }
+    .sim-compare h4 {
+      font-size: 1rem;
+      color: var(--slate-700);
+    }
+    .compare-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+    .compare-row strong {
+      color: var(--slate-900);
+    }
+    .compare-row.highlight {
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: #0f172a;
+      color: #fff;
+    }
+    .compare-row.highlight strong {
+      color: #fff;
+    }
+    .compare-note {
+      color: var(--slate-500);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .sim-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 12px;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid var(--slate-200);
+      font-weight: 700;
+    }
+    .sim-row.total {
+      background: #0f172a;
+      color: #fff;
+      border-color: #0f172a;
+    }
+    .sim-meta {
+      display: grid;
+      gap: 8px;
+      color: var(--slate-600);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .sim-details {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+    }
+    .sim-details li::before {
+      content: "•";
+      color: var(--blue-600);
+      margin-right: 8px;
+    }
+    @media (max-width: 900px) {
+      .pricing-actions {
+        justify-content: flex-start;
+      }
+      .pricing-selector {
+        grid-template-columns: 1fr;
+      }
+      .pricing-footnote {
+        text-align: left;
+      }
+      .result-header {
+        align-items: flex-start;
+      }
+      .result-foot {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- freee_lpのJSを流用 -->
+  <script src="./freee_lp/main.js"></script>
 </body>
 </html>
