@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const serviceInputs = pricingSelector.querySelectorAll('input[name="pricing-service"]');
     const salesSelect = pricingSelector.querySelector('[data-pricing-sales]');
     const salesNote = pricingSelector.querySelector('[data-pricing-sales-note]');
-    const salesField = pricingSelector.querySelector('[data-pricing-sales-field]');
-    const salesLabel = pricingSelector.querySelector('[data-pricing-sales-label]');
+    const salesGroup = pricingSelector.querySelector('[data-pricing-sales-group]');
+    const hoursGroup = pricingSelector.querySelector('[data-pricing-hours-group]');
     const hoursWrap = pricingSelector.querySelector('[data-pricing-hours]');
     const hoursInput = pricingSelector.querySelector('[data-pricing-hours-input]');
     const tagEl = pricingCard.querySelector('[data-pricing-tag]');
@@ -227,12 +227,13 @@ document.addEventListener('DOMContentLoaded', () => {
         hoursWrap.hidden = !isFoundation;
         hoursWrap.style.display = isFoundation ? 'grid' : 'none';
       }
-      if (salesField) {
-        salesField.hidden = isFoundation;
-        salesField.style.display = isFoundation ? 'none' : 'block';
+      if (hoursGroup) {
+        hoursGroup.hidden = !isFoundation;
+        hoursGroup.style.display = isFoundation ? 'block' : 'none';
       }
-      if (salesLabel) {
-        salesLabel.textContent = isFoundation ? '月あたりの作業時間' : '自社の年商';
+      if (salesGroup) {
+        salesGroup.hidden = isFoundation;
+        salesGroup.style.display = isFoundation ? 'none' : 'block';
       }
       if (salesSelect) {
         salesSelect.disabled = isFoundation;
@@ -521,7 +522,10 @@ document.addEventListener('DOMContentLoaded', () => {
       runPricingFlow();
     });
   }
-  pricingCalcButton?.addEventListener('click', runPricingFlow);
+  pricingCalcButton?.addEventListener('click', (event) => {
+    event.preventDefault();
+    runPricingFlow();
+  });
 
   const lightboxes = Array.from(document.querySelectorAll('[data-lightbox]'));
   const lightboxTriggers = document.querySelectorAll('[data-lightbox-trigger]');
