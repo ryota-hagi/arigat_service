@@ -126,6 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  let renderPricing = null;
+  let renderSimulation = null;
   const pricingSelector = document.querySelector('[data-pricing-selector]');
   const pricingCard = document.querySelector('[data-pricing-card]');
 
@@ -133,6 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const serviceInputs = pricingSelector.querySelectorAll('input[name="pricing-service"]');
     const salesSelect = pricingSelector.querySelector('[data-pricing-sales]');
     const salesNote = pricingSelector.querySelector('[data-pricing-sales-note]');
+    const salesField = pricingSelector.querySelector('[data-pricing-sales-field]');
+    const salesLabel = pricingSelector.querySelector('[data-pricing-sales-label]');
     const hoursWrap = pricingSelector.querySelector('[data-pricing-hours]');
     const hoursInput = pricingSelector.querySelector('[data-pricing-hours-input]');
     const tagEl = pricingCard.querySelector('[data-pricing-tag]');
@@ -212,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const formatYen = (value) => value.toLocaleString('ja-JP');
 
-    const renderPricing = () => {
+    renderPricing = () => {
       const selectedService = pricingSelector.querySelector('input[name="pricing-service"]:checked')?.value || 'defense';
       const salesValue = salesSelect?.value || '50m_100m';
       const data = pricingData[selectedService];
@@ -221,6 +225,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const isFoundation = selectedService === 'foundation';
       if (hoursWrap) {
         hoursWrap.hidden = !isFoundation;
+        hoursWrap.style.display = isFoundation ? 'grid' : 'none';
+      }
+      if (salesField) {
+        salesField.hidden = isFoundation;
+        salesField.style.display = isFoundation ? 'none' : 'block';
+      }
+      if (salesLabel) {
+        salesLabel.textContent = isFoundation ? '月あたりの作業時間' : '自社の年商';
+      }
+      if (salesSelect) {
+        salesSelect.disabled = isFoundation;
       }
 
       if (tagEl) {
@@ -298,21 +313,16 @@ document.addEventListener('DOMContentLoaded', () => {
     renderPricing();
   }
 
-  let setSimPlan = null;
-  const simForm = document.querySelector('[data-subsidy-sim]');
-  if (simForm) {
-    const planInputs = simForm.querySelectorAll('input[name="sim-plan"]');
-    const amountInput = simForm.querySelector('[data-sim-amount]');
-    const rateSelect = simForm.querySelector('[data-sim-rate]');
-    const upfrontEl = document.querySelector('[data-sim-upfront]');
-    const feeEl = document.querySelector('[data-sim-fee]');
-    const totalEl = document.querySelector('[data-sim-total]');
-    const noteEl = document.querySelector('[data-sim-note]');
-    const detailsEl = document.querySelector('[data-sim-details]');
-    const spotLabelEl = document.querySelector('[data-sim-spot-label]');
-    const spotEl = document.querySelector('[data-sim-spot]');
-    const diffEl = document.querySelector('[data-sim-diff]');
-    const compareEl = document.querySelector('[data-sim-compare]');
+  const simWrap = document.querySelector('[data-subsidy-sim]');
+  if (simWrap) {
+    const amountInput = simWrap.querySelector('[data-sim-amount]');
+    const amountWrap = simWrap.querySelector('[data-sim-amount-wrap]');
+    const enabledInput = simWrap.querySelector('[data-sim-enabled]');
+    const liteCheckbox = document.querySelector('[data-pricing-lite-checkbox]');
+    const resultPanel = document.querySelector('[data-sim-result]');
+    const noteEl = resultPanel?.querySelector('[data-sim-note]');
+    const detailsEl = resultPanel?.querySelector('[data-sim-details]');
+    const tableEl = resultPanel?.querySelector('.sim-table--plan');
 
     const simPlans = {
       A: {
@@ -321,8 +331,13 @@ document.addEventListener('DOMContentLoaded', () => {
         upfrontLabel: '0円',
         rates: [7.5, 10],
         details: [
-          '前提: 経営顧問 6ヶ月以上',
-          '支援範囲: 全面支援＋実行・報告のフル伴走',
+          '支援料率の大幅割引',
+          '最低支援額の廃止',
+          '事業化状況報告無料',
+          '補助金相談チャットルーム',
+          '補助金情報の配信',
+          '年間計画の策定',
+          '補助金加点項目の取得支援',
         ],
       },
       B: {
@@ -331,8 +346,12 @@ document.addEventListener('DOMContentLoaded', () => {
         upfrontLabel: '0円',
         rates: [15, 20],
         details: [
-          '前提: BPO 最低5h/月',
-          '支援範囲: 体制整備→申請、初回実績報告まで標準対応',
+          '支援料率の割引',
+          '最低支援額の引き下げ',
+          '事業化状況報告割引',
+          '補助金相談チャットルーム',
+          '補助金情報の配信',
+          '月5時間の事務代行',
         ],
       },
       L: {
@@ -341,99 +360,162 @@ document.addEventListener('DOMContentLoaded', () => {
         upfrontLabel: '0円',
         rates: [15, 20],
         details: [
-          '前提: 補助金顧問Lite（月額8,000円）加入',
-          '支援範囲: 申請準備の入口支援＋案件化で申請支援へ',
+          '支援料率の割引',
+          '最低支援額の引き下げ',
+          '事業化状況報告割引',
+          '補助金相談チャットルーム',
+          '補助金情報の配信',
         ],
       },
       S: {
         label: 'スポット',
-        upfront: 100000,
-        upfrontLabel: '10万円〜',
+        upfront: 0,
         rates: [20, 30],
         details: [
-          '前提: 月2件上限',
-          '支援範囲: 添削中心、採択後支援は原則なし',
+          '支援範囲: 書類添削・要点整理が中心',
+          '採択後の事業化状況報告は原則対象外',
+          '短期・単発での申請対応向け',
         ],
-        upfrontIsRange: true,
       },
     };
 
     const formatYen = (value) => value.toLocaleString('ja-JP');
-    const formatDiff = (value) => {
-      const sign = value >= 0 ? '+' : '-';
-      return `${sign}${formatYen(Math.abs(value))}円`;
+    const formatRateRange = (rates) => {
+      const min = Math.min(...rates);
+      const max = Math.max(...rates);
+      return min === max ? `${min}%` : `${min}%〜${max}%`;
+    };
+    const formatYenRange = (min, max, openEnded = false) => {
+      if (!Number.isFinite(min) || !Number.isFinite(max)) return '--';
+      if (openEnded) return `${formatYen(min)}円〜`;
+      return min === max ? `${formatYen(min)}円` : `${formatYen(min)}円〜${formatYen(max)}円`;
     };
 
-    const updateRateOptions = (planKey) => {
-      const plan = simPlans[planKey];
-      if (!plan || !rateSelect) return;
-      rateSelect.innerHTML = '';
-      plan.rates.forEach((rate) => {
-        const option = document.createElement('option');
-        option.value = rate;
-        option.textContent = `${rate}%`;
-        rateSelect.appendChild(option);
-      });
+    let manualPlanKey = null;
+
+    const getSelectedPlanKey = () => {
+      if (manualPlanKey) return manualPlanKey;
+      if (liteCheckbox?.checked) return 'L';
+      const selectedService = document.querySelector('input[name="pricing-service"]:checked');
+      return selectedService?.getAttribute('data-sim-plan') || 'A';
     };
 
-    const renderSimulation = () => {
-      const planKey = simForm.querySelector('input[name="sim-plan"]:checked')?.value || 'A';
+    const updateHighlight = (planKey) => {
+      if (!tableEl) return;
+      const cells = tableEl.querySelectorAll('[data-sim-plan]');
+      cells.forEach((cell) => cell.classList.remove('is-highlight'));
+      const targetCells = tableEl.querySelectorAll(`[data-sim-plan="${planKey}"]`);
+      targetCells.forEach((cell) => cell.classList.add('is-highlight'));
+    };
+
+    const renderDetails = (planKey) => {
+      if (!detailsEl) return;
       const plan = simPlans[planKey];
-      if (!plan) return;
-      const isSpot = planKey === 'S';
-      if (rateSelect && rateSelect.options.length === 0) {
-        updateRateOptions(planKey);
+      if (!plan) {
+        detailsEl.innerHTML = '';
+        return;
       }
+      detailsEl.innerHTML = plan.details.map((item) => `<li>${item}</li>`).join('');
+    };
 
+    const updateVisibility = () => {
+      const isEnabled = enabledInput ? enabledInput.checked : true;
+      if (amountWrap) amountWrap.hidden = !isEnabled;
+      if (amountInput) amountInput.disabled = !isEnabled;
+      if (resultPanel && !isEnabled) resultPanel.hidden = true;
+      return isEnabled;
+    };
+
+    renderSimulation = () => {
+      const isEnabled = updateVisibility();
+      if (!isEnabled || !resultPanel) return;
       const amountRaw = parseFloat(amountInput?.value || '');
       const amount = Number.isFinite(amountRaw) && amountRaw > 0 ? amountRaw : 0;
-      const rate = parseFloat(rateSelect?.value || plan.rates[0]);
-      const fee = Math.round(amount * (rate / 100));
-      const total = plan.upfront + fee;
-      const spotPlan = simPlans.S;
-      const spotRate = rate === 7.5 || rate === 15 ? 20 : 30;
-      const spotTotal = spotPlan.upfront + Math.round(amount * (spotRate / 100));
-      const diff = spotTotal - total;
 
-      if (upfrontEl) upfrontEl.textContent = plan.upfrontLabel || `${formatYen(plan.upfront)}円`;
-      if (feeEl) feeEl.textContent = `${formatYen(fee)}円`;
-      if (totalEl) {
-        totalEl.textContent = plan.upfrontIsRange ? `${formatYen(total)}円〜` : `${formatYen(total)}円`;
-      }
+      Object.entries(simPlans).forEach(([planKey, plan]) => {
+        const minRate = Math.min(...plan.rates);
+        const maxRate = Math.max(...plan.rates);
+        const feeMin = Math.round(amount * (minRate / 100));
+        const feeMax = Math.round(amount * (maxRate / 100));
+        const totalMin = plan.upfront + feeMin;
+        const totalMax = plan.upfront + feeMax;
+        const upfrontLabel = plan.upfrontIsRange ? plan.upfrontLabel : `${formatYen(plan.upfront)}円`;
+        const rateLabel = formatRateRange(plan.rates);
+        const feeLabel = formatYenRange(feeMin, feeMax);
+        const totalLabel = formatYenRange(totalMin, totalMax, plan.upfrontIsRange);
+
+        const upfrontEl = resultPanel.querySelector(`[data-sim-upfront="${planKey}"]`);
+        const rateEl = resultPanel.querySelector(`[data-sim-rate="${planKey}"]`);
+        const feeEl = resultPanel.querySelector(`[data-sim-fee="${planKey}"]`);
+        const totalEl = resultPanel.querySelector(`[data-sim-total="${planKey}"]`);
+
+        if (upfrontEl) upfrontEl.textContent = upfrontLabel;
+        if (rateEl) rateEl.textContent = rateLabel;
+        if (feeEl) feeEl.textContent = feeLabel;
+        if (totalEl) totalEl.textContent = totalLabel;
+      });
+
+      const selectedPlanKey = getSelectedPlanKey();
+      updateHighlight(selectedPlanKey);
+      renderDetails(selectedPlanKey);
+
       if (noteEl) {
-        const amountLabel = amount > 0 ? `${formatYen(amount)}円` : '補助金額';
-        noteEl.textContent = `${amountLabel} × ${rate}% の成功報酬で計算しています。`;
+        const amountLabel = amount > 0 ? `${formatYen(amount)}円` : '補助金申請額';
+        noteEl.textContent = `${amountLabel} を基に試算しています。`;
       }
-      if (detailsEl) {
-        detailsEl.innerHTML = plan.details.map((item) => `<li>${item}</li>`).join('');
-      }
-      if (compareEl) compareEl.hidden = isSpot;
-      if (!isSpot) {
-        if (spotLabelEl) spotLabelEl.textContent = `スポット合計（${spotRate}%）`;
-        if (spotEl) spotEl.textContent = `${formatYen(spotTotal)}円`;
-        if (diffEl) diffEl.textContent = `${formatDiff(diff)}`;
-      }
+      resultPanel.hidden = false;
     };
 
-    planInputs.forEach((input) => {
-      input.addEventListener('change', () => {
-        updateRateOptions(input.value);
+    enabledInput?.addEventListener('change', () => {
+      updateVisibility();
+      if (resultPanel && !resultPanel.hidden) {
         renderSimulation();
+      }
+    });
+
+    amountInput?.addEventListener('input', () => {
+      if (resultPanel && !resultPanel.hidden) {
+        renderSimulation();
+      }
+    });
+
+    const serviceInputs = document.querySelectorAll('input[name="pricing-service"]');
+    serviceInputs.forEach((input) => {
+      input.addEventListener('change', () => {
+        manualPlanKey = null;
+        if (resultPanel && !resultPanel.hidden) {
+          renderSimulation();
+        }
       });
     });
-    rateSelect?.addEventListener('change', renderSimulation);
-    amountInput?.addEventListener('input', renderSimulation);
-    updateRateOptions('A');
-    renderSimulation();
-
-    setSimPlan = (planKey) => {
-      const targetInput = simForm.querySelector(`input[name="sim-plan"][value="${planKey}"]`);
-      if (targetInput) {
-        targetInput.checked = true;
-        updateRateOptions(planKey);
+    liteCheckbox?.addEventListener('change', () => {
+      manualPlanKey = null;
+      if (resultPanel && !resultPanel.hidden) {
         renderSimulation();
       }
-    };
+    });
+    tableEl?.addEventListener('click', (event) => {
+      const cell = event.target.closest('[data-sim-plan]');
+      const planKey = cell?.getAttribute('data-sim-plan');
+      if (!planKey) return;
+      manualPlanKey = planKey;
+      if (resultPanel && !resultPanel.hidden) {
+        renderSimulation();
+      }
+    });
+
+    updateVisibility();
+  }
+
+  const pricingForm = document.querySelector('[data-pricing-form]');
+  const resultsPanel = document.querySelector('[data-pricing-results]');
+  if (pricingForm) {
+    pricingForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      renderPricing?.();
+      renderSimulation?.();
+      resultsPanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }
 
   const lightboxes = Array.from(document.querySelectorAll('[data-lightbox]'));
@@ -457,10 +539,6 @@ document.addEventListener('DOMContentLoaded', () => {
   lightboxTriggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const targetKey = trigger.getAttribute('data-lightbox-trigger');
-      if (targetKey === 'subsidy-sim' && typeof setSimPlan === 'function') {
-        const defaultPlan = trigger.getAttribute('data-sim-default') || 'A';
-        setSimPlan(defaultPlan);
-      }
       openLightbox(targetKey);
     });
   });
