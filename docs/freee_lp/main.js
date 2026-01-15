@@ -509,14 +509,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const pricingForm = document.querySelector('[data-pricing-form]');
   const resultsPanel = document.querySelector('[data-pricing-results]');
+  const pricingCalcButton = document.querySelector('[data-pricing-calc]');
+  const runPricingFlow = () => {
+    renderPricing?.();
+    renderSimulation?.();
+    resultsPanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
   if (pricingForm) {
     pricingForm.addEventListener('submit', (event) => {
       event.preventDefault();
-      renderPricing?.();
-      renderSimulation?.();
-      resultsPanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      runPricingFlow();
     });
   }
+  pricingCalcButton?.addEventListener('click', runPricingFlow);
 
   const lightboxes = Array.from(document.querySelectorAll('[data-lightbox]'));
   const lightboxTriggers = document.querySelectorAll('[data-lightbox-trigger]');

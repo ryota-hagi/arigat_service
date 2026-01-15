@@ -432,7 +432,7 @@
                   </div>
                   <div class="hub-input-actions">
                     <p class="hub-input-note">入力後に計算すると、下の結果に自動で移動します。</p>
-                    <button class="btn btn-primary btn-shine" type="submit" data-pricing-calc>計算する</button>
+                    <button class="btn btn-primary btn-shine" type="button" data-pricing-calc>計算する</button>
                   </div>
                 </form>
               </div>
@@ -1783,6 +1783,10 @@
       margin-top: 16px;
       display: grid;
       gap: 10px;
+    }
+    .selector-hours[hidden],
+    .selector-select[hidden] {
+      display: none !important;
     }
     .selector-hours label span {
       display: block;
