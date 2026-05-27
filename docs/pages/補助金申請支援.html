@@ -94,9 +94,20 @@
             </li>
           </ul>
         </div>
-        <div class="bg-blue-50 rounded-2xl p-8 text-center">
-          <img src="https://placehold.jp/384/2563eb/ffffff/300x300.png?text=補助金獲得%0Aプランニング" alt="補助金獲得プランニングのイメージ" class="mx-auto rounded-full shadow-lg">
-          <p class="mt-6 font-semibold text-blue-800">経験豊富なコンサルタントが、<br>貴社の補助金活用を成功に導きます。</p>
+        <div class="bg-blue-50 rounded-2xl p-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white border border-blue-100 p-5 text-center shadow-sm">
+              <i data-lucide="monitor-check" class="w-12 h-12 text-blue-600 mx-auto mb-3"></i>
+              <h3 class="font-bold text-blue-800">セルフ申請</h3>
+              <p class="mt-2 text-sm text-slate-600">入力・提出はお客様が行い、当社は計画書と様式作成を支援します。</p>
+            </div>
+            <div class="rounded-2xl bg-white border border-emerald-100 p-5 text-center shadow-sm">
+              <i data-lucide="landmark" class="w-12 h-12 text-emerald-600 mx-auto mb-3"></i>
+              <h3 class="font-bold text-emerald-800">行政書士申請</h3>
+              <p class="mt-2 text-sm text-slate-600">提携行政書士が申請画面への入力・代理申請まで担当します。</p>
+            </div>
+          </div>
+          <p class="mt-6 text-center font-semibold text-blue-800">申請方式によって、料金と作業範囲が異なります。</p>
         </div>
       </section>
 
@@ -137,160 +148,234 @@
       <section id="plans" class="rounded-3xl bg-white border border-slate-200 shadow-xl shadow-blue-100/60 p-8 sm:p-10">
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10">
           <div class="lg:max-w-2xl">
-            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">Plan Highlights</p>
-            <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">貴社に最適なプランが見つかる</h2>
-            <p class="mt-4 text-sm sm:text-base text-slate-600 leading-7">単発の申請代行から、継続的な情報提供、バックオフィスを含めた体制整備まで。貴社の状況に合わせて5つのプランから柔軟にお選びいただけます。</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">Application Types</p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">申請方式は2種類</h2>
+            <p class="mt-4 text-sm sm:text-base text-slate-600 leading-7">申請画面への入力・提出をお客様ご自身で行う「セルフ申請」と、提携行政書士が入力・代理申請を担当する「行政書士申請」から選べます。いずれも補助事業計画・申請様式の作成支援は当社が担当します。</p>
           </div>
           <div class="flex flex-col gap-2 text-sm text-slate-500 bg-blue-50 border border-blue-100 rounded-2xl p-4">
-            <span class="font-semibold text-blue-700">プラン選定のワンポイント</span>
+            <span class="font-semibold text-blue-700">方式選びの目安</span>
             <ul class="list-disc list-inside space-y-1.5">
-              <li>成功報酬と報告費用で採択後のキャッシュアウトを比較</li>
-              <li>社内リソースや投資スピードで継続的な関与度合いを判断</li>
-              <li>複数プランの組み合わせも柔軟に対応可能です</li>
+              <li>費用を抑えたい方はセルフ申請</li>
+              <li>入力・提出を任せたい方は行政書士申請</li>
+              <li>最終確認や一部本人操作が必要な場合があります</li>
             </ul>
           </div>
         </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div class="rounded-2xl border border-rose-200 bg-white p-6 shadow-sm flex flex-col">
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-2 text-sm font-semibold text-rose-600"><i data-lucide="zap" class="w-4 h-4"></i>スポット（S）</span>
-              <span class="text-xs text-rose-500">単発</span>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-2xl border border-blue-200 bg-blue-50 p-6 shadow-sm">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="bg-white text-blue-700 p-3 rounded-full"><i data-lucide="monitor-check" class="w-8 h-8"></i></div>
+              <div>
+                <h3 class="text-2xl font-bold text-blue-900">セルフ申請</h3>
+                <p class="text-sm text-slate-600">費用を抑えやすい方式</p>
+              </div>
             </div>
-            <p class="text-base font-semibold text-rose-600">成功報酬15〜30%</p>
-            <p class="text-sm text-slate-500 mb-4">事業化状況報告 1.5〜5万円</p>
-            <ul class="space-y-2 text-sm text-slate-600 leading-relaxed flex-1">
-              <li>申請書の添削・作成をスポットで外部化</li>
-              <li>採択後の実務は自社で完結する企業に適合</li>
-              <li>代表承認制（月2件まで）のため緊急案件向け</li>
-            </ul>
+            <div class="rounded-xl bg-white border border-blue-100 p-4 mb-4">
+              <div class="font-semibold text-blue-800 mb-2">主な役割</div>
+              <ul class="space-y-2 text-sm text-slate-600">
+                <li>当社：補助事業計画・申請様式の作成支援</li>
+                <li>お客様：申請画面入力、提出、事務局連絡</li>
+              </ul>
+            </div>
+            <p class="text-sm text-slate-600">最終確認や一部本人操作が必要となる場合があります。</p>
           </div>
-          <div class="rounded-2xl border border-amber-200 bg-white p-6 shadow-sm flex flex-col">
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-2 text-sm font-semibold text-amber-600"><i data-lucide="message-circle" class="w-4 h-4"></i>補助金顧問Lite</span>
-              <span class="text-xs text-amber-500">月額8,000円</span>
+          <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-6 shadow-sm">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="bg-white text-emerald-700 p-3 rounded-full"><i data-lucide="landmark" class="w-8 h-8"></i></div>
+              <div>
+                <h3 class="text-2xl font-bold text-emerald-900">行政書士申請</h3>
+                <p class="text-sm text-slate-600">入力・提出を任せたい方向け</p>
+              </div>
             </div>
-            <p class="text-base font-semibold text-amber-600">成功報酬15〜20%</p>
-            <p class="text-sm text-slate-500 mb-4">事業化状況報告 0.8〜2万円</p>
-            <ul class="space-y-2 text-sm text-slate-600 leading-relaxed flex-1">
-              <li>チャット相談と最新公募情報を定期配信</li>
-              <li>主要4補助金（持続化・省力化投資・ものづくり・新事業進出）をライトに支援</li>
-              <li>社内体制はあるが情報整理と報告支援を欲しい企業に</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl border border-violet-200 bg-white p-6 shadow-sm flex flex-col">
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-2 text-sm font-semibold text-violet-600"><i data-lucide="layers" class="w-4 h-4"></i>BPOセット（B）</span>
-              <span class="text-xs text-violet-500">体制整備</span>
+            <div class="rounded-xl bg-white border border-emerald-100 p-4 mb-4">
+              <div class="font-semibold text-emerald-800 mb-2">主な役割</div>
+              <ul class="space-y-2 text-sm text-slate-600">
+                <li>当社：補助事業計画・申請様式の作成支援</li>
+                <li>提携行政書士：申請画面入力、代理申請</li>
+                <li>お客様：事業内容決定、必要資料の提供</li>
+              </ul>
             </div>
-            <p class="text-base font-semibold text-violet-600">成功報酬15〜20%</p>
-            <p class="text-sm text-slate-500 mb-4">事業化状況報告 BPO時間内<br class="hidden xl:block"><span class="text-xs">（0.8〜2万円相当）</span></p>
-            <ul class="space-y-2 text-sm text-slate-600 leading-relaxed flex-1">
-              <li>記帳・証憑整理・月次決算までをBPOで包括</li>
-              <li>補助金に必要な帳票・証憑・監査対応を平時から整備</li>
-              <li>バックオフィス強化と補助金活用を同時に進めたい企業に</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl border border-emerald-200 bg-white p-6 shadow-sm flex flex-col lg:col-span-1">
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600"><i data-lucide="target" class="w-4 h-4"></i>補助金顧問</span>
-              <span class="text-xs text-emerald-500">月額3〜5万円</span>
-            </div>
-            <p class="text-base font-semibold text-emerald-600">成功報酬10〜15%</p>
-            <p class="text-sm text-slate-500 mb-4">事業化状況報告 0円 / 最低支援額なし</p>
-            <ul class="space-y-2 text-sm text-slate-600 leading-relaxed flex-1">
-              <li>年間ロードマップと投資計画を連動させて複数申請を実行</li>
-              <li>加点項目取得、資金繰り・KPIモニタリングまで伴走</li>
-              <li>年商規模に応じて月額3万円（5億円以下）/ 5万円（5億円超）</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl border border-blue-200 bg-white p-6 shadow-sm flex flex-col lg:col-span-2">
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-2 text-sm font-semibold text-blue-700"><i data-lucide="compass" class="w-4 h-4"></i>顧問セット（A）</span>
-              <span class="text-xs text-blue-500">月額5〜20万円</span>
-            </div>
-            <p class="text-base font-semibold text-blue-700">成功報酬10〜15%</p>
-            <p class="text-sm text-slate-500 mb-4">事業化状況報告 0円 / 着手金0円</p>
-            <ul class="space-y-2 text-sm text-slate-600 leading-relaxed flex-1">
-              <li>補助金×融資×投資を統合し、財務KPIを月次で運用</li>
-              <li>銀行交渉・資金繰り管理・投資判断まで含めた司令塔機能を提供</li>
-              <li>グループ全体の資金戦略をアップデートし続けたい企業に</li>
-            </ul>
+            <p class="text-sm text-slate-600">操作に不安がある方におすすめです。</p>
           </div>
         </div>
       </section>
 
-      <!-- ########## START: UNMODIFIED PLAN COMPARISON SECTION ########## -->
+      <!-- Pricing Section -->
       <section class="section-card rounded-3xl p-8 sm:p-10">
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
-          <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">Plans</p>
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">プラン比較</h2>
-            <p class="mt-3 text-sm sm:text-base text-slate-600">スポット(S)で必要な部分だけ依頼することも、補助金顧問Lite/補助金顧問/顧問セットで年間計画まで伴走することも可能です。表を参考に、投資規模と社内体制にフィットするプランをお選びください。</p>
+        <div class="mb-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">Pricing Plans</p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">料金プラン</h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-600">表示価格は税別です。Liteと顧問は6ヶ月以上の契約が必要です。成功報酬は原則として採択または交付決定された補助金額を基準に算定します。</p>
+        </div>
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div class="min-w-0">
+            <div class="rounded-t-2xl bg-blue-700 text-white text-center font-bold py-3 text-lg">セルフ申請プラン</div>
+            <div class="overflow-x-auto rounded-b-2xl border border-blue-200 shadow-inner">
+              <table class="min-w-full text-center text-sm bg-white">
+                <thead class="bg-blue-50 text-blue-900">
+                  <tr>
+                    <th class="px-4 py-3 border-b border-blue-100">プラン</th>
+                    <th class="px-4 py-3 border-b border-blue-100">月額</th>
+                    <th class="px-4 py-3 border-b border-blue-100">着手金</th>
+                    <th class="px-4 py-3 border-b border-blue-100">小型料率</th>
+                    <th class="px-4 py-3 border-b border-blue-100">大型料率</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-blue-100">
+                    <td class="px-4 py-4 font-semibold text-slate-800">スポット</td>
+                    <td class="px-4 py-4">0円</td>
+                    <td class="px-4 py-4">小型30,000円<br>大型50,000円</td>
+                    <td class="px-4 py-4 text-blue-700 font-bold text-lg">27.5%</td>
+                    <td class="px-4 py-4 text-blue-700 font-bold text-lg">17.5%</td>
+                  </tr>
+                  <tr class="border-b border-blue-100 bg-slate-50">
+                    <td class="px-4 py-4 font-semibold text-slate-800">Lite</td>
+                    <td class="px-4 py-4">8,000円</td>
+                    <td class="px-4 py-4">0円</td>
+                    <td class="px-4 py-4 text-blue-700 font-bold text-lg">17.5%</td>
+                    <td class="px-4 py-4 text-blue-700 font-bold text-lg">12.5%</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-4 font-semibold text-slate-800">顧問</td>
+                    <td class="px-4 py-4">30,000円 /<br>50,000円</td>
+                    <td class="px-4 py-4">0円</td>
+                    <td class="px-4 py-4 text-blue-700 font-bold text-lg">12.5%</td>
+                    <td class="px-4 py-4 text-blue-700 font-bold text-lg">7.5%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="min-w-0">
+            <div class="rounded-t-2xl bg-emerald-700 text-white text-center font-bold py-3 text-lg">行政書士申請プラン</div>
+            <div class="overflow-x-auto rounded-b-2xl border border-emerald-200 shadow-inner">
+              <table class="min-w-full text-center text-sm bg-white">
+                <thead class="bg-emerald-50 text-emerald-900">
+                  <tr>
+                    <th class="px-4 py-3 border-b border-emerald-100">プラン</th>
+                    <th class="px-4 py-3 border-b border-emerald-100">月額</th>
+                    <th class="px-4 py-3 border-b border-emerald-100">着手金</th>
+                    <th class="px-4 py-3 border-b border-emerald-100">小型料率</th>
+                    <th class="px-4 py-3 border-b border-emerald-100">大型料率</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-emerald-100">
+                    <td class="px-4 py-4 font-semibold text-slate-800">スポット</td>
+                    <td class="px-4 py-4">0円</td>
+                    <td class="px-4 py-4">0円</td>
+                    <td class="px-4 py-4 text-emerald-700 font-bold text-lg">35.0%</td>
+                    <td class="px-4 py-4 text-emerald-700 font-bold text-lg">25.0%</td>
+                  </tr>
+                  <tr class="border-b border-emerald-100 bg-slate-50">
+                    <td class="px-4 py-4 font-semibold text-slate-800">Lite</td>
+                    <td class="px-4 py-4">8,000円</td>
+                    <td class="px-4 py-4">0円</td>
+                    <td class="px-4 py-4 text-emerald-700 font-bold text-lg">22.5%</td>
+                    <td class="px-4 py-4 text-emerald-700 font-bold text-lg">15.0%</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-4 font-semibold text-slate-800">顧問</td>
+                    <td class="px-4 py-4">30,000円 /<br>50,000円</td>
+                    <td class="px-4 py-4">0円</td>
+                    <td class="px-4 py-4 text-emerald-700 font-bold text-lg">17.5%</td>
+                    <td class="px-4 py-4 text-emerald-700 font-bold text-lg">10.0%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
+        <div class="mt-6 text-xs sm:text-sm text-slate-600 space-y-1">
+          <p>※小型：小規模事業者持続化補助金・省力化投資補助金カタログ型など。大型：ものづくり補助金・省力化投資補助金一般型・新事業進出補助金など。</p>
+          <p>※成功報酬は原則として採択または交付決定された補助金額を基準に算定します。</p>
+        </div>
+      </section>
+
+      <!-- Work Scope Section -->
+      <section class="section-card rounded-3xl p-8 sm:p-10">
+        <div class="mb-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">Work Scope</p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">作業範囲の違い</h2>
+          <p class="mt-3 text-sm sm:text-base text-slate-600">セルフ申請は低コスト、行政書士申請は申請作業の外部化に向いています。いずれの方式でも、お客様による事業内容の決定と必要資料の提供が前提です。</p>
+        </div>
         <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-inner">
-          <table class="min-w-full text-left text-sm">
-            <thead class="bg-slate-50 text-slate-600 uppercase text-xs tracking-wider">
+          <table class="min-w-full text-center text-sm bg-white">
+            <thead class="bg-slate-50 text-slate-700">
               <tr>
                 <th class="px-4 py-3 border-b">項目</th>
-                <th class="px-4 py-3 border-b">スポット（S）<span class="ml-2 inline-flex px-2 py-0.5 text-[10px] rounded-full bg-rose-100 text-rose-700">単発</span></th>
-                <th class="px-4 py-3 border-b">補助金顧問Lite<span class="ml-2 inline-flex px-2 py-0.5 text-[10px] rounded-full bg-amber-100 text-amber-700">月額8,000円</span></th>
-                <th class="px-4 py-3 border-b">BPOセット（B）<span class="ml-2 inline-flex px-2 py-0.5 text-[10px] rounded-full bg-violet-100 text-violet-700">体制整備</span></th>
-                <th class="px-4 py-3 border-b">補助金顧問<span class="ml-2 inline-flex px-2 py-0.5 text-[10px] rounded-full bg-emerald-100 text-emerald-700">月額3万~/5万~</span></th>
-                <th class="px-4 py-3 border-b">顧問セット（A）<span class="ml-2 inline-flex px-2 py-0.5 text-[10px] rounded-full bg-blue-100 text-blue-700">推奨</span></th>
+                <th class="px-4 py-3 border-b text-blue-700">セルフ申請</th>
+                <th class="px-4 py-3 border-b text-emerald-700">行政書士申請</th>
               </tr>
             </thead>
-            <tbody class="align-top">
-              <tr class="border-b">
-                <td class="px-4 py-4 font-medium text-slate-700">着手金</td>
-                <td class="px-4 py-4 text-slate-600">0円</td>
-                <td class="px-4 py-4 text-slate-600">0円</td>
-                <td class="px-4 py-4 text-slate-600">0円</td>
-                <td class="px-4 py-4 text-slate-600">0円</td>
-                <td class="px-4 py-4 text-slate-600">0円</td>
-              </tr>
-              <tr class="border-b bg-white">
-                <td class="px-4 py-4 font-medium text-slate-700">成功報酬</td>
-                <td class="px-4 py-4 text-rose-600 font-semibold">15〜30%</td>
-                <td class="px-4 py-4 text-amber-600 font-semibold">15〜20%</td>
-                <td class="px-4 py-4 text-violet-600 font-semibold">15〜20%</td>
-                <td class="px-4 py-4 text-emerald-600 font-semibold">10〜15%</td>
-                <td class="px-4 py-4 text-blue-700 font-semibold">10〜15%</td>
-              </tr>
-              <tr class="border-b">
-                <td class="px-4 py-4 font-medium text-slate-700">作成支援</td>
-                <td class="px-4 py-4 text-slate-600">対象補助金のみ支援</td>
-                <td class="px-4 py-4 text-slate-600">複数補助金の支援</td>
-                <td class="px-4 py-4 text-slate-600">複数補助金の支援</td>
-                <td class="px-4 py-4 text-slate-600">年間計画と連動した支援</td>
-                <td class="px-4 py-4 text-slate-600">年間計画と連動した支援</td>
-              </tr>
-              <tr class="border-b bg-white">
-                <td class="px-4 py-4 font-medium text-slate-700">事業化状況報告</td>
-                <td class="px-4 py-4 text-slate-600">1.5〜5万円</td>
-                <td class="px-4 py-4 text-amber-600">0.8〜2万円</td>
-                <td class="px-4 py-4 text-violet-600">BPO時間の範囲内<br><span class="text-[11px] text-slate-500">（0.8〜2万円相当）</span></td>
-                <td class="px-4 py-4 text-emerald-600 font-semibold">0円</td>
-                <td class="px-4 py-4 text-blue-700 font-semibold">0円</td>
-              </tr>
-              <tr>
-                <td class="px-4 py-4 font-medium text-slate-700">前提</td>
-                <td class="px-4 py-4 text-slate-600">なし</td>
-                <td class="px-4 py-4 text-slate-600">月額0.8万円契約</td>
-                <td class="px-4 py-4 text-slate-600">BPO契約（5h〜）</td>
-                <td class="px-4 py-4 text-slate-600">月額3〜5万円契約</td>
-                <td class="px-4 py-4 text-slate-600">月額5〜20万円契約</td>
-              </tr>
+            <tbody>
+              <tr class="border-b"><td class="px-4 py-3 font-medium text-left">補助事業計画の作成</td><td class="px-4 py-3">当社が作成支援</td><td class="px-4 py-3">当社が作成支援</td></tr>
+              <tr class="border-b bg-slate-50"><td class="px-4 py-3 font-medium text-left">申請様式の作成支援</td><td class="px-4 py-3">当社が作成支援</td><td class="px-4 py-3">当社が作成支援</td></tr>
+              <tr class="border-b"><td class="px-4 py-3 font-medium text-left">関連資料・添付書類</td><td class="px-4 py-3">必要資料リスト提示・整理助言</td><td class="px-4 py-3">準備・保管支援</td></tr>
+              <tr class="border-b bg-slate-50"><td class="px-4 py-3 font-medium text-left">申請画面への入力・提出</td><td class="px-4 py-3 text-blue-700 font-semibold">お客様</td><td class="px-4 py-3 text-emerald-700 font-semibold">提携行政書士</td></tr>
+              <tr class="border-b"><td class="px-4 py-3 font-medium text-left">差戻し対応</td><td class="px-4 py-3">書類修正支援</td><td class="px-4 py-3">書類修正支援＋申請画面対応</td></tr>
+              <tr class="border-b bg-slate-50"><td class="px-4 py-3 font-medium text-left">交付申請・実績報告</td><td class="px-4 py-3">様式作成支援</td><td class="px-4 py-3">様式作成支援＋代理申請</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="mt-6 text-xs sm:text-sm text-slate-500">継続活用による採択最大化や資金繰り改善を目指す場合は、補助金顧問Lite・補助金顧問・顧問セット(A)のご利用を推奨しています。</p>
+        <p class="mt-5 text-xs sm:text-sm text-slate-500">※制度上、申請者本人による最終確認・最終提出など、一部本人操作が必要となる場合があります。</p>
       </section>
-      <!-- ########## END: UNMODIFIED PLAN COMPARISON SECTION ########## -->
+
+      <!-- Exclusions and Selection Guide -->
+      <section class="grid gap-8 lg:grid-cols-2">
+        <div class="section-card rounded-3xl p-8 sm:p-10">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600">Exclusions</p>
+          <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-emerald-900">対象外となる主な業務</h2>
+          <ul class="mt-6 space-y-3 text-sm sm:text-base text-slate-700">
+            <li class="flex gap-3"><i data-lucide="x-circle" class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5"></i>事業内容・購入内容・経費配分の最終決定</li>
+            <li class="flex gap-3"><i data-lucide="x-circle" class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5"></i>補助対象可否の最終判断</li>
+            <li class="flex gap-3"><i data-lucide="x-circle" class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5"></i>売上・利益・賃金・投資回収等の数値算定責任</li>
+            <li class="flex gap-3"><i data-lucide="x-circle" class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5"></i>見積取得、発注先選定、契約締結</li>
+            <li class="flex gap-3"><i data-lucide="x-circle" class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5"></i>GビズIDの取得・管理、ID・パスワード管理</li>
+            <li class="flex gap-3"><i data-lucide="x-circle" class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5"></i>お客様名義での最終確認・宣誓・同意操作</li>
+            <li class="flex gap-3"><i data-lucide="x-circle" class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5"></i>補助金事務局やシステムサポートへの個別問い合わせ</li>
+          </ul>
+          <div class="mt-6 rounded-2xl bg-emerald-50 border border-emerald-100 p-4 text-center text-emerald-900 font-semibold">原則としてお客様の責任範囲です。</div>
+        </div>
+        <div class="section-card rounded-3xl p-8 sm:p-10">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">Plan Guide</p>
+          <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900">プラン選びの目安</h2>
+          <div class="mt-6 space-y-4">
+            <div class="rounded-2xl border border-blue-100 bg-blue-50 p-5 flex items-center gap-4">
+              <i data-lucide="wallet" class="w-9 h-9 text-blue-700 flex-shrink-0"></i>
+              <div><div class="text-sm text-blue-700 font-semibold">費用を抑えたい方</div><div class="text-xl font-bold text-blue-900">セルフ申請</div></div>
+            </div>
+            <div class="rounded-2xl border border-emerald-100 bg-emerald-50 p-5 flex items-center gap-4">
+              <i data-lucide="user-check" class="w-9 h-9 text-emerald-700 flex-shrink-0"></i>
+              <div><div class="text-sm text-emerald-700 font-semibold">入力・提出を任せたい方</div><div class="text-xl font-bold text-emerald-900">行政書士申請</div></div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 flex items-center gap-4">
+              <i data-lucide="trending-up" class="w-9 h-9 text-slate-700 flex-shrink-0"></i>
+              <div><div class="text-sm text-slate-600 font-semibold">継続的に補助金を活用したい方</div><div class="text-xl font-bold text-slate-900">Lite / 顧問プラン</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Confirmation Notes -->
+      <section class="section-card rounded-3xl p-8 sm:p-10">
+        <div class="flex flex-col sm:flex-row gap-5">
+          <div class="bg-blue-50 text-blue-700 p-4 rounded-2xl h-fit"><i data-lucide="clipboard-check" class="w-10 h-10"></i></div>
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">ご確認事項</h2>
+            <ul class="mt-5 space-y-3 text-sm sm:text-base text-slate-700">
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600 flex-shrink-0"></span>採択・交付決定・交付額・入金時期は保証できません。</li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600 flex-shrink-0"></span>審査未提出や期限超過等により申請できない場合があります。</li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600 flex-shrink-0"></span>制度変更や公募要領の改定により、必要書類や対応範囲が変わる場合があります。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <!-- Simulation Button -->
       <div class="text-center -mt-4 mb-12">
-          <a href="https://docs.google.com/spreadsheets/d/1_uYdP1F7qKe-nTouj3TIrYN6S5qMyxTOBIDUmFQ3voE/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-white text-emerald-600 font-semibold px-6 py-3 rounded-full border border-emerald-200 shadow-sm hover:bg-emerald-50 hover:shadow-md transition-all">
+          <a href="https://docs.google.com/spreadsheets/d/1_icmij8WREw8z_THh9NlM2JudvRW1id78fHw3ZSg6lE/edit?gid=593751529#gid=593751529" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-white text-emerald-600 font-semibold px-6 py-3 rounded-full border border-emerald-200 shadow-sm hover:bg-emerald-50 hover:shadow-md transition-all">
               <i data-lucide="calculator" class="w-5 h-5"></i>
               <span>料金シミュレーション</span>
               <i data-lucide="external-link" class="w-4 h-4 text-slate-400"></i>

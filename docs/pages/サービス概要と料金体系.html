@@ -309,7 +309,7 @@
                             </div>
                         </div>
                         <p class="mt-6 text-xs text-slate-500">※支援料率は補助金採択時の成功報酬です（補助金額 × 支援料率）。最低支援額を下回る場合は表記金額を申し受けます。補助金顧問プランでは最低支援額を撤廃しています。</p>
-                        <a href="https://docs.google.com/spreadsheets/d/1_uYdP1F7qKe-nTouj3TIrYN6S5qMyxTOBIDUmFQ3voE/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex w-full items-center justify-center gap-2 border border-amber-500 bg-white text-amber-600 font-bold py-3 px-6 rounded-lg hover:bg-amber-50 transition-colors">
+                        <a href="https://docs.google.com/spreadsheets/d/1_icmij8WREw8z_THh9NlM2JudvRW1id78fHw3ZSg6lE/edit?gid=593751529#gid=593751529" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex w-full items-center justify-center gap-2 border border-amber-500 bg-white text-amber-600 font-bold py-3 px-6 rounded-lg hover:bg-amber-50 transition-colors">
                             <i data-lucide="calculator" class="w-5 h-5"></i>料金シミュレーション
                         </a>
                         <a href="補助金顧問サービス.html" class="mt-4 inline-flex w-full items-center justify-center gap-2 bg-amber-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-amber-600 transition-colors">
@@ -336,19 +336,39 @@
                             </div>
                         </div>
                         <p class="text-slate-600 mb-6">
-                            採択率だけでなく、採択後の実行・報告まで見据えた伴走支援で、投資効果を最大化します。<span class="font-bold">単発でのご依頼は高コストかつリスクが高いため推奨しておりません。</span>補助金顧問Lite・補助金顧問への加入で、支援料率・最低支援額・事業化報告費用を最適化できます。
+                            申請方式は、電子申請画面の入力・提出をお客様が行う「セルフ申請」と、提携行政書士が入力・代理申請まで担当する「行政書士申請」の2種類です。補助事業計画・申請様式の作成支援は当社が担当し、申請方式と契約プランに応じて料金と作業範囲が変わります。
                         </p>
-                        <div class="bg-slate-50 rounded-lg p-6 my-auto">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <span class="text-lg font-medium text-slate-600">着手金</span>
-                                <span class="price-tag text-blue-600 comparison-value" data-with-advisor="0円" data-without-advisor="10万円~">0円</span>
+                        <div class="bg-slate-50 rounded-lg p-6 my-auto space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="bg-white border border-blue-100 rounded-lg p-4">
+                                    <div class="flex items-center gap-2 text-blue-700 font-bold mb-2"><i data-lucide="monitor-check" class="w-5 h-5"></i>セルフ申請</div>
+                                    <p class="text-sm text-slate-600">入力・提出はお客様。費用を抑えたい方向け。</p>
+                                </div>
+                                <div class="bg-white border border-emerald-100 rounded-lg p-4">
+                                    <div class="flex items-center gap-2 text-emerald-700 font-bold mb-2"><i data-lucide="landmark" class="w-5 h-5"></i>行政書士申請</div>
+                                    <p class="text-sm text-slate-600">提携行政書士が入力・代理申請。操作に不安がある方向け。</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-sm">
+                                <div class="rounded-lg border border-slate-200 bg-white p-3">
+                                    <div class="font-semibold text-slate-700">スポット</div>
+                                    <div class="text-xs text-slate-500">月額0円</div>
+                                </div>
+                                <div class="rounded-lg border border-slate-200 bg-white p-3">
+                                    <div class="font-semibold text-slate-700">Lite</div>
+                                    <div class="text-xs text-slate-500">月額8,000円</div>
+                                </div>
+                                <div class="rounded-lg border border-slate-200 bg-white p-3">
+                                    <div class="font-semibold text-slate-700">顧問</div>
+                                    <div class="text-xs text-slate-500">月額30,000円/50,000円</div>
+                                </div>
                             </div>
                             <div class="flex justify-between items-baseline">
                                 <span class="text-lg font-medium text-slate-600">成功報酬</span>
-                                <span class="price-tag text-blue-600 comparison-value" data-with-advisor="プラン別 10%〜20%" data-without-advisor="スポット 20%〜30%">プラン別 10%〜20%</span>
+                                <span class="price-tag text-blue-600 comparison-value" data-with-advisor="小型12.5%〜 / 大型7.5%〜" data-without-advisor="小型27.5%〜 / 大型17.5%〜">小型12.5%〜 / 大型7.5%〜</span>
                             </div>
-                            <div id="advisor-benefit-subsidy" class="text-center mt-4 text-green-600 font-semibold opacity-100 transition-opacity">
-                                顧問セット(プランA)適用
+                            <div id="advisor-benefit-subsidy" class="text-center mt-2 text-green-600 font-semibold opacity-100 transition-opacity">
+                                Lite・顧問プランは着手金0円
                             </div>
                         </div>
                         <a href="補助金申請支援.html" class="mt-8 w-full text-center bg-amber-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-amber-600 transition-colors">詳細を見る</a>
@@ -552,12 +572,12 @@
             
             // For Subsidy Support
              if (isAdvisor) {
-                subsidyBenefit.textContent = '補助金顧問プラン適用';
+                subsidyBenefit.textContent = 'Lite・顧問プランは着手金0円';
                 subsidyBenefit.classList.remove('text-slate-500');
                 subsidyBenefit.classList.add('text-green-600');
                 subsidyBenefit.style.opacity = 1;
             } else {
-                subsidyBenefit.textContent = 'スポット依頼 (単発対応)';
+                subsidyBenefit.textContent = 'スポットはセルフ申請のみ着手金あり';
                 subsidyBenefit.classList.remove('text-green-600');
                 subsidyBenefit.classList.add('text-slate-500');
                 subsidyBenefit.style.opacity = 1;
