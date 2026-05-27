@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
         label: '顧問セット',
         upfront: 0,
         upfrontLabel: '0円',
-        rates: [7.5, 10],
+        rates: [7.5, 17.5],
         details: [
           '支援料率の大幅割引',
           '最低支援額の廃止',
@@ -359,10 +359,11 @@ document.addEventListener('DOMContentLoaded', () => {
         label: '補助金顧問Lite',
         upfront: 0,
         upfrontLabel: '0円',
-        rates: [15, 20],
+        rates: [12.5, 22.5],
         details: [
-          '支援料率の割引',
-          '最低支援額の引き下げ',
+          'セルフ申請: 持続化17.5%、主要大型12.5%',
+          '行政書士申請: 持続化22.5%、主要大型15.0%',
+          '最低支援額: 持続化10万円/20万円、主要大型50万円',
           '事業化状況報告割引',
           '補助金相談チャットルーム',
           '補助金情報の配信',
